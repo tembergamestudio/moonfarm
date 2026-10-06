@@ -7,7 +7,7 @@
 </head>
 <body><main>
 <header><h1>Moon Farm</h1><p class="meta">Tember Studio</p>
-<div class="lang" id="langbar"><a href="#en">English</a><a href="#th">ภาษาไทย</a><a href="#ja">日本語</a><a href="#ko">한국어</a><a href="#zh-Hant">繁體中文</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#es">Español</a><a href="#pt-BR">Português (Brasil)</a><a href="#id">Bahasa Indonesia</a><a href="#vi">Tiếng Việt</a><a href="#ru">Русский</a><a href="#ar">العربية</a><a href="#it">Italiano</a><a href="#tr">Türkçe</a></div>
+<div class="lang" id="langbar"><a href="#en" lang="en"><img src="flags/gb.png" alt="" width="20" height="15">English</a><a href="#th" lang="th"><img src="flags/th.png" alt="" width="20" height="15">ภาษาไทย</a><a href="#ja" lang="ja"><img src="flags/jp.png" alt="" width="20" height="15">日本語</a><a href="#ko" lang="ko"><img src="flags/kr.png" alt="" width="20" height="15">한국어</a><a href="#zh-Hant" lang="zh-Hant">繁體中文</a><a href="#de" lang="de"><img src="flags/de.png" alt="" width="20" height="15">Deutsch</a><a href="#fr" lang="fr"><img src="flags/fr.png" alt="" width="20" height="15">Français</a><a href="#es" lang="es"><img src="flags/es.png" alt="" width="20" height="15">Español</a><a href="#pt-BR" lang="pt-BR"><img src="flags/br.png" alt="" width="20" height="15">Português (Brasil)</a><a href="#id" lang="id"><img src="flags/id.png" alt="" width="20" height="15">Bahasa Indonesia</a><a href="#vi" lang="vi"><img src="flags/vn.png" alt="" width="20" height="15">Tiếng Việt</a><a href="#ru" lang="ru"><img src="flags/ru.png" alt="" width="20" height="15">Русский</a><a href="#ar" lang="ar"><img src="flags/sa.png" alt="" width="20" height="15">العربية</a><a href="#it" lang="it"><img src="flags/it.png" alt="" width="20" height="15">Italiano</a><a href="#tr" lang="tr"><img src="flags/tr.png" alt="" width="20" height="15">Türkçe</a></div>
 </header>
 <section id="en" lang="en">
 <p>A cozy farming game for mobile.</p>
@@ -144,41 +144,31 @@
 <a href="mailto:tember.game.studio@gmail.com">İletişim — tember.game.studio@gmail.com</a>
 </div>
 </section>
-<footer>© 2026 Tember Studio</footer>
+<footer>© 2026 Tember Studio · Flag icons: <a href="https://github.com/lipis/flag-icons">flag-icons</a> © Panayiotis Lipiridis (MIT)</footer>
 <!-- i18n:script -->
 <script>
 (function () {
   var bar = document.getElementById('langbar'); if (!bar) return;
   var secs = [].slice.call(document.querySelectorAll('main > section[id]'));
   var ids = secs.map(function (s) { return s.id; });
-  var map = { en: 'en', th: 'th', ja: 'ja', ko: 'ko', de: 'de', fr: 'fr', es: 'es', pt: 'pt-BR', id: 'id', vi: 'vi', ru: 'ru', ar: 'ar', it: 'it', tr: 'tr' };
   function pick() {
-    var h = decodeURIComponent(location.hash.slice(1)); if (ids.indexOf(h) > -1) return h;
-    try { var s = localStorage.getItem('mf-lang'); if (ids.indexOf(s) > -1) return s; } catch (e) {}
-    var n = navigator.languages || [navigator.language || 'en'];
-    for (var i = 0; i < n.length; i++) {
-      var l = String(n[i]).toLowerCase();
-      if (l.indexOf('zh') === 0) { if (/tw|hk|mo|hant/.test(l)) return 'zh-Hant'; continue; }
-      var p = l.split('-')[0]; if (map[p] && ids.indexOf(map[p]) > -1) return map[p];
-    }
-    return 'en';
+    var h = decodeURIComponent(location.hash.slice(1)); return ids.indexOf(h) > -1 ? h : 'en';
   }
-  function show(id, save) {
+  function show(id) {
     secs.forEach(function (s) { s.hidden = s.id !== id; });
     [].forEach.call(bar.querySelectorAll('a'), function (a) {
       var on = a.getAttribute('href') === '#' + id; a.classList.toggle('on', on);
       if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
     });
     var s = document.getElementById(id); document.documentElement.lang = s.getAttribute('lang') || id;
-    if (save) { try { localStorage.setItem('mf-lang', id); } catch (e) {} }
   }
   bar.addEventListener('click', function (e) {
     var a = e.target.closest('a'); if (!a) return; e.preventDefault();
-    var id = a.getAttribute('href').slice(1); show(id, true);
+    var id = a.getAttribute('href').slice(1); show(id);
     try { history.replaceState(null, '', '#' + id); } catch (x) { location.hash = id; }
   });
-  window.addEventListener('hashchange', function () { var h = decodeURIComponent(location.hash.slice(1)); if (ids.indexOf(h) > -1) show(h, true); });
-  show(pick(), false);
+  window.addEventListener('hashchange', function () { var h = decodeURIComponent(location.hash.slice(1)); if (ids.indexOf(h) > -1) show(h); });
+  show(pick());
 })();
 </script>
 <!-- /i18n:script -->
