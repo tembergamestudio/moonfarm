@@ -26,11 +26,9 @@ th, td { text-align: start; vertical-align: top; padding: 8px 6px; border-bottom
 code { background: var(--line); padding: 1px 6px; border-radius: 6px; }
 footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
 
-/* Game loading-screen wallpaper + logo banner (2026-10-07) */
-.hero { display: flex; align-items: center; justify-content: center; min-height: 150px; padding: 16px;
-  background: #7fb6e0 url(img/bg.jpg) center 70% / cover no-repeat; }
+/* Game logo at the top of every page (2026-10-07 · wallpaper dropped, logo only) */
+.hero { display: flex; justify-content: center; padding: 24px 16px 0; }
 .hero a, .hero h1 { display: block; margin: 0; line-height: 0; }
-.hero img { display: block; width: min(240px, 62vw); height: auto; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .28)); }
-.hero.tall { min-height: 300px; }
-.hero.tall img { width: min(460px, 84vw); }
-@media (max-width: 480px) { .hero { min-height: 120px; } .hero.tall { min-height: 220px; } }
+.hero img { display: block; width: min(220px, 60vw); height: auto; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .18)); }
+.hero.tall { padding-top: 40px; }
+.hero.tall img { width: min(420px, 84vw); }
