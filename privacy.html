@@ -25,6 +25,7 @@
 <tr><td>โปรไฟล์ที่คุณตั้งเอง: ชื่อในเกม ธงประเทศที่เลือกเอง กรอบ และรูปโปรไฟล์ (ถ้าอัปโหลด)</td><td>คุณกรอก/เลือกเอง</td><td>แสดงให้ผู้เล่นอื่นเห็นในตลาด</td></tr>
 <tr><td>ข้อมูลตลาด: ของที่วางขาย ผู้ซื้อ ราคา</td><td>เกิดจากการซื้อขาย</td><td>ให้ระบบตลาดทำงาน</td></tr>
 <tr><td>การรายงานและการบล็อกผู้เล่น ประวัติการตรวจสอบเนื้อหา</td><td>เกิดจากการใช้ปุ่มรายงาน/บล็อก และการตรวจของทีมงาน</td><td>ดูแลชุมชนให้ปลอดภัย</td></tr>
+<tr><td>สัญญาณกันโกง: จำนวนช่วงเวลาที่เล่นในแต่ละวัน จำนวนครั้งที่ซื้อจากผู้เล่นคนเดิม คำสั่งที่เซิร์ฟเวอร์ปฏิเสธ ประวัติการคืนเงินกับร้านค้า และประวัติการระงับบัญชี/แก้ยอด</td><td>เซิร์ฟเวอร์บันทึกระหว่างเล่น และทีมงานบันทึกเมื่อตรวจสอบ</td><td>ตรวจหาการโกงและการคืนเงินโดยมิชอบ — ระบบแค่แจ้งเตือน <b>คนเป็นผู้ตัดสินเสมอ</b> ไม่มีการลงโทษอัตโนมัติ</td></tr>
 <tr><td>หลักฐานการซื้อ (รหัสธุรกรรม/ใบเสร็จจาก Apple หรือ Google) — <b>เราไม่เห็นข้อมูลบัตรหรือการชำระเงิน</b></td><td>ร้านค้าส่งมาเมื่อคุณซื้อ</td><td>ยืนยันการซื้อ ให้ของ กู้คืนการซื้อ กันการโกงและคืนเงิน</td></tr>
 <tr><td>อีเมลและข้อความที่คุณส่งถึงเรา</td><td>เมื่อคุณติดต่อเรา</td><td>ตอบคำถาม ดำเนินการตามคำขอ</td></tr>
 </table>
@@ -45,7 +46,8 @@
 <ul>
 <li>ข้อมูลบัญชีและการเล่น: เก็บจนกว่าคุณจะลบบัญชี</li>
 <li>รูปโปรไฟล์เก่า: ลบทันทีเมื่อคุณเปลี่ยนหรือเอารูปออก</li>
-<li>รายการรายงาน: ลบเมื่อทีมงานพิจารณาเสร็จ หรือเมื่อบัญชีที่เกี่ยวข้องถูกลบ</li>
+<li>รายการรายงานและการแจ้งเตือนกันโกง: ลบเมื่อทีมงานพิจารณาเสร็จ หรือเมื่อบัญชีที่เกี่ยวข้องถูกลบ</li>
+<li>ประวัติการตรวจสอบ การระงับ และการแก้ยอด: เก็บจนกว่าจะลบบัญชี · บัญชีที่ถูกระงับยังขอลบได้ตามปกติ</li>
 <li><b>บันทึกการซื้อ</b> (รหัสธุรกรรมคู่กับรหัสผู้เล่น ไม่มีชื่อ): เก็บไว้แม้ลบบัญชีแล้ว เพื่อใช้กับการคืนเงิน การกู้คืนการซื้อ การกันโกง และบัญชีรายรับ</li>
 <li>อีเมล: เก็บไว้ไม่เกินที่จำเป็นต่อการดำเนินเรื่อง</li>
 <li>ข้อมูลที่ลบแล้วอาจยังอยู่ในระบบสำรองของผู้ให้บริการได้ชั่วระยะเวลาสั้น ๆ ก่อนถูกลบตามรอบของผู้ให้บริการ</li>
@@ -79,6 +81,7 @@
 <tr><td>Profile you choose: in-game name, a country flag you pick, frame, and a profile picture (if you upload one)</td><td>You enter or pick it</td><td>Shown to other players in the market</td></tr>
 <tr><td>Market data: listings, buyers, prices</td><td>From trading</td><td>To run the market</td></tr>
 <tr><td>Player reports, blocks, and moderation history</td><td>From the report/block buttons and our review</td><td>To keep the community safe</td></tr>
+<tr><td>Anti-cheat signals: how many time windows you play each day, how often you buy from the same player, actions the server refused, store refunds, and any suspension or balance correction</td><td>Recorded by the server while you play, and by our staff when they review</td><td>To detect cheating and refund abuse — the system only alerts us; <b>a person always decides</b>, nothing is punished automatically</td></tr>
 <tr><td>Proof of purchase (transaction ID / receipt from Apple or Google) — <b>we never see your card or payment details</b></td><td>Sent by the store when you buy</td><td>To verify purchases, deliver items, restore purchases, prevent fraud and handle refunds</td></tr>
 <tr><td>Your email address and messages</td><td>When you contact us</td><td>To answer and handle your request</td></tr>
 </table>
@@ -99,7 +102,8 @@
 <ul>
 <li>Account and game data: until you delete your account</li>
 <li>Old profile pictures: deleted as soon as you change or remove them</li>
-<li>Reports: deleted once reviewed, or when an account involved is deleted</li>
+<li>Reports and anti-cheat alerts: deleted once reviewed, or when an account involved is deleted</li>
+<li>Moderation, suspension and correction history: kept until the account is deleted · suspended accounts can still be deleted</li>
 <li><b>Purchase records</b> (transaction ID with Player ID, no name): kept after account deletion for refunds, restoring purchases, fraud prevention and accounting</li>
 <li>Emails: no longer than needed to handle your request</li>
 <li>Deleted data may remain in our providers' backups for a short time until their regular cycle removes it</li>
