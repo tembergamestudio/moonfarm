@@ -28,9 +28,7 @@ footer { margin-top: 48px; color: var(--muted); font-size: 14px; text-align: cen
 footer img.studio { display: block; width: 120px; height: auto; margin: 0 auto 8px; }
 footer p { margin: 0; }
 
-/* Game logo at the top of every page (2026-10-07 · wallpaper dropped, logo only) */
-.hero { display: flex; justify-content: center; padding: 24px 16px 0; }
+/* Game logo at the top of every page — same size on every page (2026-10-07) */
+.hero { display: flex; justify-content: center; padding: 40px 16px 0; }
 .hero a, .hero h1 { display: block; margin: 0; line-height: 0; }
-.hero img { display: block; width: min(300px, 80vw); height: auto; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .18)); }
-.hero.tall { padding-top: 40px; }
-.hero.tall img { width: min(580px, 94vw); }
+.hero img { display: block; width: min(580px, 94vw); height: auto; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .18)); }
