@@ -24,7 +24,9 @@ ul, ol { padding-left: 0; padding-inline-start: 22px; }
 table { width: 100%; border-collapse: collapse; font-size: 15px; }
 th, td { text-align: start; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
 code { background: var(--line); padding: 1px 6px; border-radius: 6px; }
-footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; text-align: center; }
+footer img.studio { display: block; width: 120px; height: auto; margin: 0 auto 8px; }
+footer p { margin: 0; }
 
 /* Game logo at the top of every page (2026-10-07 · wallpaper dropped, logo only) */
 .hero { display: flex; justify-content: center; padding: 24px 16px 0; }
