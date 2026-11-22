@@ -60,3 +60,15 @@ body.home .links.legal { display: flex; flex-wrap: wrap; justify-content: center
 body.home .links.legal a { display: inline; padding: 0; margin: 0; background: none; border: 0; border-radius: 0; font-weight: 400; font-size: 14px; color: var(--muted); text-decoration: underline; }
 .toast { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 10; background: var(--fg); color: var(--bg); padding: 10px 20px; border-radius: 999px; font-size: 15px; font-weight: 600; box-shadow: 0 6px 20px rgba(0, 0, 0, .25); max-width: calc(100vw - 32px); text-align: center; }
 .toast[hidden] { display: none; }
+
+/* Looping screenshot slideshow (2026-11-23) */
+.shots { margin: 24px 0 0; }
+.shots-stage { position: relative; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: var(--line); box-shadow: 0 6px 24px rgba(0, 0, 0, .18); }
+.shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .9s ease; }
+.shot.on { opacity: 1; }
+.shots-dots { display: flex; justify-content: center; gap: 2px; margin-top: 6px; }
+.shots-dots button { position: relative; width: 26px; height: 26px; padding: 0; border: 0; background: none; cursor: pointer; }
+.shots-dots button::before { content: ""; position: absolute; inset: 8px; border-radius: 50%; background: var(--line); transition: background .2s, transform .2s; }
+.shots-dots button.on::before { background: var(--accent); transform: scale(1.25); }
+.shots-dots button:focus-visible { outline: 3px solid var(--accent); outline-offset: 0; border-radius: 50%; }
+@media (prefers-reduced-motion: reduce) { .shot { transition: none; } .badge { transition: none; } }

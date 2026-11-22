@@ -257,6 +257,14 @@
 <a href="mailto:tember.game.studio@gmail.com">İletişim — tember.game.studio@gmail.com</a>
 </div>
 </section>
+<div class="shots" id="shots" role="group" aria-roledescription="carousel" aria-label="Moon Farm screenshots">
+<div class="shots-stage">
+<img class="shot on" src="img/shot-1-800.webp" srcset="img/shot-1-800.webp 800w, img/shot-1.webp 1600w" sizes="(max-width: 880px) 100vw, 880px" width="1600" height="900" alt="Moon Farm screenshot 1">
+<img class="shot" src="img/shot-2-800.webp" srcset="img/shot-2-800.webp 800w, img/shot-2.webp 1600w" sizes="(max-width: 880px) 100vw, 880px" width="1600" height="900" alt="Moon Farm screenshot 2" loading="lazy">
+<img class="shot" src="img/shot-3-800.webp" srcset="img/shot-3-800.webp 800w, img/shot-3.webp 1600w" sizes="(max-width: 880px) 100vw, 880px" width="1600" height="900" alt="Moon Farm screenshot 3" loading="lazy">
+</div>
+<div class="shots-dots"><button type="button" aria-label="1"></button><button type="button" aria-label="2"></button><button type="button" aria-label="3"></button></div>
+</div>
 <footer><img class="studio" src="img/tember.webp" alt="Tember Studio" width="293" height="360">
 <p>© 2026 Tember Studio · Flag icons: <a href="https://github.com/lipis/flag-icons">flag-icons</a> © Panayiotis Lipiridis (MIT)</p></footer>
 <div id="soon" class="toast" role="status" aria-live="polite" hidden></div>
@@ -279,6 +287,8 @@ var STORE_LINKS = { apple: '', google: '' };
       if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
     });
     var s = document.getElementById(id); document.documentElement.lang = s.getAttribute('lang') || id;
+    var shots = document.getElementById('shots'), plat = s.querySelector('.platforms');
+    if (shots && plat) plat.after(shots);
     var logo = document.getElementById('herologo');
     if (logo) {
       var H = { ar: 'ar', ja: 'ja', ko: 'ko', ru: 'ru', th: 'th', 'zh-Hant': 'zh' }[id] || 'en';
@@ -302,6 +312,32 @@ var STORE_LINKS = { apple: '', google: '' };
   });
   window.addEventListener('hashchange', function () { var h = decodeURIComponent(location.hash.slice(1)); if (ids.indexOf(h) > -1) show(h); });
   show(pick());
+  // Screenshot slideshow: loops forever; pauses on hover/focus/touch and when the tab is hidden; no autoplay if the visitor prefers reduced motion.
+  var box = document.getElementById('shots');
+  if (box) {
+    var slides = [].slice.call(box.querySelectorAll('.shot')), dots = [].slice.call(box.querySelectorAll('.shots-dots button'));
+    var cur = 0, tick = null, paused = false, still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function go(n) {
+      cur = (n + slides.length) % slides.length;
+      slides.forEach(function (im, i) { im.classList.toggle('on', i === cur); });
+      dots.forEach(function (d, i) { d.classList.toggle('on', i === cur); if (i === cur) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+    }
+    function play() { stop(); if (!still && !paused && !document.hidden) tick = setInterval(function () { go(cur + 1); }, 4500); }
+    function stop() { if (tick) { clearInterval(tick); tick = null; } }
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); play(); }); });
+    box.addEventListener('mouseenter', function () { paused = true; stop(); });
+    box.addEventListener('mouseleave', function () { paused = false; play(); });
+    box.addEventListener('focusin', function () { paused = true; stop(); });
+    box.addEventListener('focusout', function () { paused = false; play(); });
+    var x0 = null;
+    box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    box.addEventListener('touchend', function (e) {
+      if (x0 !== null) { var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); }
+      x0 = null; play();
+    }, { passive: true });
+    document.addEventListener('visibilitychange', play);
+    go(0); play();
+  }
 })();
 </script>
 <!-- /i18n:script -->
