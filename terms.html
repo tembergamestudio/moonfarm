@@ -11,7 +11,7 @@
 <header>
   <h1>Terms of Use</h1>
   <p class="meta">Effective: October 6, 2026</p>
-  <div class="lang" id="langbar"><a href="#en" lang="en"><img src="flags/gb.png" alt="" width="20" height="15">English</a><a href="#th" lang="th"><img src="flags/th.png" alt="" width="20" height="15">ภาษาไทย</a><a href="#ja" lang="ja"><img src="flags/jp.png" alt="" width="20" height="15">日本語</a><a href="#ko" lang="ko"><img src="flags/kr.png" alt="" width="20" height="15">한국어</a><a href="#zh-Hant" lang="zh-Hant">繁體中文</a><a href="#de" lang="de"><img src="flags/de.png" alt="" width="20" height="15">Deutsch</a><a href="#fr" lang="fr"><img src="flags/fr.png" alt="" width="20" height="15">Français</a><a href="#es" lang="es"><img src="flags/es.png" alt="" width="20" height="15">Español</a><a href="#pt-BR" lang="pt-BR"><img src="flags/br.png" alt="" width="20" height="15">Português (Brasil)</a><a href="#id" lang="id"><img src="flags/id.png" alt="" width="20" height="15">Bahasa Indonesia</a><a href="#vi" lang="vi"><img src="flags/vn.png" alt="" width="20" height="15">Tiếng Việt</a><a href="#ru" lang="ru"><img src="flags/ru.png" alt="" width="20" height="15">Русский</a><a href="#ar" lang="ar"><img src="flags/sa.png" alt="" width="20" height="15">العربية</a><a href="#it" lang="it"><img src="flags/it.png" alt="" width="20" height="15">Italiano</a><a href="#tr" lang="tr"><img src="flags/tr.png" alt="" width="20" height="15">Türkçe</a></div>
+  <div class="langmenu" id="langmenu"><button type="button" id="langbtn" aria-haspopup="true" aria-expanded="false" aria-label="Language"><span class="globe" aria-hidden="true">🌐</span><span id="langcur">English</span><span class="caret" aria-hidden="true">▾</span></button><div class="lang" id="langbar"><a href="#en" lang="en"><img src="flags/gb.png" alt="" width="20" height="15">English</a><a href="#th" lang="th"><img src="flags/th.png" alt="" width="20" height="15">ภาษาไทย</a><a href="#ja" lang="ja"><img src="flags/jp.png" alt="" width="20" height="15">日本語</a><a href="#ko" lang="ko"><img src="flags/kr.png" alt="" width="20" height="15">한국어</a><a href="#zh-Hant" lang="zh-Hant"><span class="flagtxt" aria-hidden="true">繁</span>繁體中文</a><a href="#de" lang="de"><img src="flags/de.png" alt="" width="20" height="15">Deutsch</a><a href="#fr" lang="fr"><img src="flags/fr.png" alt="" width="20" height="15">Français</a><a href="#es" lang="es"><img src="flags/es.png" alt="" width="20" height="15">Español</a><a href="#pt-BR" lang="pt-BR"><img src="flags/br.png" alt="" width="20" height="15">Português (Brasil)</a><a href="#id" lang="id"><img src="flags/id.png" alt="" width="20" height="15">Bahasa Indonesia</a><a href="#vi" lang="vi"><img src="flags/vn.png" alt="" width="20" height="15">Tiếng Việt</a><a href="#ru" lang="ru"><img src="flags/ru.png" alt="" width="20" height="15">Русский</a><a href="#ar" lang="ar"><img src="flags/sa.png" alt="" width="20" height="15">العربية</a><a href="#it" lang="it"><img src="flags/it.png" alt="" width="20" height="15">Italiano</a><a href="#tr" lang="tr"><img src="flags/tr.png" alt="" width="20" height="15">Türkçe</a></div></div>
 </header>
 
 <section id="en">
@@ -458,6 +458,14 @@ Kelimeleri filtreler, resimleri kontrol eder, şikâyet ve engelleme imkânı su
 <script>
 (function () {
   var bar = document.getElementById('langbar'); if (!bar) return;
+  var menu = document.getElementById('langmenu'), btn = document.getElementById('langbtn'), cur0 = document.getElementById('langcur');
+  function setMenu(open) { if (!menu) return; menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  if (menu) {
+    menu.classList.add('js');
+    btn.addEventListener('click', function (e) { e.stopPropagation(); setMenu(!menu.classList.contains('open')); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) setMenu(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); btn.focus(); } });
+  }
   var secs = [].slice.call(document.querySelectorAll('main > section[id]'));
   var ids = secs.map(function (s) { return s.id; });
   function pick() {
@@ -467,6 +475,7 @@ Kelimeleri filtreler, resimleri kontrol eder, şikâyet ve engelleme imkânı su
     secs.forEach(function (s) { s.hidden = s.id !== id; });
     [].forEach.call(bar.querySelectorAll('a'), function (a) {
       var on = a.getAttribute('href') === '#' + id; a.classList.toggle('on', on);
+      if (on && cur0) cur0.textContent = a.textContent;
       if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
     });
     var s = document.getElementById(id); document.documentElement.lang = s.getAttribute('lang') || id;
@@ -475,7 +484,7 @@ Kelimeleri filtreler, resimleri kontrol eder, şikâyet ve engelleme imkânı su
   }
   bar.addEventListener('click', function (e) {
     var a = e.target.closest('a'); if (!a) return; e.preventDefault();
-    var id = a.getAttribute('href').slice(1); show(id);
+    var id = a.getAttribute('href').slice(1); show(id); setMenu(false);
     try { history.replaceState(null, '', '#' + id); } catch (x) { location.hash = id; }
   });
   window.addEventListener('hashchange', function () { var h = decodeURIComponent(location.hash.slice(1)); if (ids.indexOf(h) > -1) show(h); });
