@@ -40,12 +40,11 @@ body.home .hero img { width: min(1100px, 100%); height: auto; border-radius: 20p
 body.home header { margin-bottom: 8px; }
 body.home .lang { justify-content: center; }
 .tagline { font-size: clamp(20px, 4.6vw, 27px); font-weight: 700; line-height: 1.4; text-align: center; margin: 22px auto 6px; max-width: 640px; }
-.cta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 14px; margin: 14px 0 6px; }
+.cta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px 18px; margin: 16px 0 8px; }
 .badge { display: inline-block; line-height: 0; border-radius: 10px; transition: transform .15s; }
 .badge:hover { transform: translateY(-2px); }
 .badge:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .badge img { display: block; height: 48px; width: auto; }
-.badge.google img { height: 72px; margin: -12px -10px; }
 .platforms { text-align: center; color: var(--muted); font-size: 14px; margin: 4px 0 0; }
 .lead { text-align: center; color: var(--muted); max-width: 640px; margin: 22px auto 0; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin: 26px 0 14px; }
@@ -64,8 +63,9 @@ body.home .links.legal a { display: inline; padding: 0; margin: 0; background: n
 /* Looping screenshot slideshow (2026-11-23) */
 .shots { margin: 24px 0 0; }
 .shots-stage { position: relative; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: var(--line); box-shadow: 0 6px 24px rgba(0, 0, 0, .18); }
-.shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .9s ease; }
-.shot.on { opacity: 1; }
+.shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; z-index: 0; transition: opacity .9s ease; }
+.shot.prev { opacity: 1; z-index: 1; transition: none; }
+.shot.on { opacity: 1; z-index: 2; }
 .shots-dots { display: flex; justify-content: center; gap: 2px; margin-top: 6px; }
 .shots-dots button { position: relative; width: 26px; height: 26px; padding: 0; border: 0; background: none; cursor: pointer; }
 .shots-dots button::before { content: ""; position: absolute; inset: 8px; border-radius: 50%; background: var(--line); transition: background .2s, transform .2s; }
