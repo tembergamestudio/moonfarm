@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="hero"><a href="index.html" aria-label="Moon Farm — home"><img src="img/logo.webp" alt="Moon Farm" width="1100" height="547"></a></div>
+<div class="hero"><a href="index.html" aria-label="Moon Farm — home"><img id="herologo" src="img/logo.webp" alt="Moon Farm" width="1100" height="547"></a></div>
 <main>
 <header>
   <h1>Terms of Use</h1>
@@ -470,6 +470,8 @@ Kelimeleri filtreler, resimleri kontrol eder, şikâyet ve engelleme imkânı su
       if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
     });
     var s = document.getElementById(id); document.documentElement.lang = s.getAttribute('lang') || id;
+    var logo = document.getElementById('herologo');
+    if (logo) { var L = { ar: 'ar', ja: 'ja', ko: 'ko', ru: 'ru', th: 'th', 'zh-Hant': 'zh' }[id]; logo.src = L ? 'img/logo-' + L + '.webp' : 'img/logo.webp'; }
   }
   bar.addEventListener('click', function (e) {
     var a = e.target.closest('a'); if (!a) return; e.preventDefault();

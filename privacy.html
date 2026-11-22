@@ -6,11 +6,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="hero"><a href="index.html" aria-label="Moon Farm — home"><img src="img/logo.webp" alt="Moon Farm" width="1100" height="547"></a></div>
+<div class="hero"><a href="index.html" aria-label="Moon Farm — home"><img id="herologo" src="img/logo.webp" alt="Moon Farm" width="1100" height="547"></a></div>
 <main>
 <header>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective: October 17, 2026 · updated: optional rewarded ads, account linking</p>
+  <p class="meta">Effective: November 10, 2026 · updated: social features (posts, albums, gift badges, verified badge), retention of deleted pictures</p>
   <div class="lang" id="langbar"><a href="#en" lang="en"><img src="flags/gb.png" alt="" width="20" height="15">English</a><a href="#th" lang="th"><img src="flags/th.png" alt="" width="20" height="15">ภาษาไทย</a><a href="#ja" lang="ja"><img src="flags/jp.png" alt="" width="20" height="15">日本語</a><a href="#ko" lang="ko"><img src="flags/kr.png" alt="" width="20" height="15">한국어</a><a href="#zh-Hant" lang="zh-Hant">繁體中文</a><a href="#de" lang="de"><img src="flags/de.png" alt="" width="20" height="15">Deutsch</a><a href="#fr" lang="fr"><img src="flags/fr.png" alt="" width="20" height="15">Français</a><a href="#es" lang="es"><img src="flags/es.png" alt="" width="20" height="15">Español</a><a href="#pt-BR" lang="pt-BR"><img src="flags/br.png" alt="" width="20" height="15">Português (Brasil)</a><a href="#id" lang="id"><img src="flags/id.png" alt="" width="20" height="15">Bahasa Indonesia</a><a href="#vi" lang="vi"><img src="flags/vn.png" alt="" width="20" height="15">Tiếng Việt</a><a href="#ru" lang="ru"><img src="flags/ru.png" alt="" width="20" height="15">Русский</a><a href="#ar" lang="ar"><img src="flags/sa.png" alt="" width="20" height="15">العربية</a><a href="#it" lang="it"><img src="flags/it.png" alt="" width="20" height="15">Italiano</a><a href="#tr" lang="tr"><img src="flags/tr.png" alt="" width="20" height="15">Türkçe</a></div>
 </header>
 
@@ -28,11 +28,13 @@
 <tr><td>Player reports, blocks, and moderation history</td><td>From the report/block buttons and our review</td><td>To keep the community safe</td></tr>
 <tr><td>Anti-cheat signals: how many time windows you play each day, how often you buy from the same player, actions the server refused, store refunds, and any suspension or balance correction</td><td>Recorded by the server while you play, and by our staff when they review</td><td>To detect cheating and refund abuse — the system only alerts us; <b>a person always decides</b>, nothing is punished automatically</td></tr>
 <tr><td>Proof of purchase (transaction ID / receipt from Apple or Google) — <b>we never see your card or payment details</b></td><td>Sent by the store when you buy</td><td>To verify purchases, deliver items, restore purchases, prevent fraud and handle refunds</td></tr>
-<tr><td>Your email address and messages</td><td>When you contact us</td><td>To answer and handle your request</td></tr>
+<tr><td>Your email address and messages, including messages sent from the in-game Contact us form (with your Player ID, game version and device model)</td><td>When you contact us</td><td>To answer, fix bugs and improve the Game</td></tr>
 <tr><td>If you choose to link your account: an account ID from Apple (Sign in with Apple) or Google (Play Games) — <b>not your name, email or photo</b></td><td>When you tap “Link account”</td><td>So you can keep your farm on a new device and use friends, market and guild</td></tr>
 <tr><td>Advertising data: your device’s advertising ID (only if you allow it — on iPhone you are asked first), device and app information, IP address, and whether you watched an ad</td><td>Collected by Unity LevelPlay and its ad partners when the Game loads or shows an ad</td><td>To show the optional ads you choose to watch, give the reward, measure ads and prevent ad fraud</td></tr>
+<tr><td>Social content you create: posts, photos you choose to post or put in albums, comments, likes, follows, close-friends list, gift badges and their messages, album and shop names, friend requests and their messages</td><td>You post or pick it</td><td>Shown to the players you choose (everyone, friends or close friends); photos are checked for inappropriate content first</td></tr>
+<tr><td>If you ask for a verified badge: the link to a public social media account of yours (e.g. Instagram, YouTube, TikTok) and a code we give you — <b>no ID documents</b></td><td>You send it</td><td>So our staff can open the public account and confirm it is yours</td></tr>
 </table>
-<p>The Game shows <b>only optional “watch an ad for a reward” videos</b> — never forced ads or banners. These ads are delivered by <b>Unity LevelPlay</b> and its ad partners, who may use your device’s advertising ID to show ads that fit you; on iPhone this happens only if you allow tracking. You can turn off personalised ads or reset your advertising ID in your device settings, and on iPhone choose “Ask App Not to Track”. <b>We do not sell your data.</b> The Game does not access your location, contacts or photo library (except the one picture you choose to upload as your profile picture).</p>
+<p>The Game shows <b>only optional “watch an ad for a reward” videos</b> — never forced ads or banners. These ads are delivered by <b>Unity LevelPlay</b> and its ad partners, who may use your device’s advertising ID to show ads that fit you; on iPhone this happens only if you allow tracking. You can turn off personalised ads or reset your advertising ID in your device settings, and on iPhone choose “Ask App Not to Track”. <b>We do not sell your data.</b> The Game does not access your location, contacts or photo library (except the pictures you pick yourself to upload: your profile picture and photos for posts, albums or friend chat).</p>
 
 <h3>2. Service providers who receive data</h3>
 <ul>
@@ -47,12 +49,17 @@
 <p>These providers use the data only to provide their service to us and must protect it at least as well as this policy requires. Data may be stored on servers outside Thailand.</p>
 <p>Other players only see your in-game name and tag number, picture, frame and flag (when you buy from their market stall).</p>
 
+<p><b>Supabase</b> also stores your posts, comments, likes, follows, albums, gift badges and verified-badge requests; posted and album photos are reachable by a public link so the players allowed to see them can.</p>
+
 <h3>3. How long we keep data</h3>
 <ul>
+<li>Posts, comments, album photos and gift badges: until you delete them or your account (a reported item may be hidden while staff check it) · verified-badge request: until staff decide, then the decision is kept while your badge is shown</li>
 <li>Account and game data: until you delete your account</li>
-<li>Old profile pictures: deleted as soon as you change or remove them</li>
+<li>Old profile pictures: kept in your “Profile pictures” album when you change or remove one, until you delete them (you can delete any of them yourself)</li>
 <li>Reports and anti-cheat alerts: deleted once reviewed, or when an account involved is deleted</li>
+<li>Messages from the in-game Contact us form: deleted once we have read and handled them</li>
 <li>Moderation, suspension and correction history: kept until the account is deleted · suspended accounts can still be deleted</li>
+<li><b>Deleted pictures:</b> when you delete a picture (post photo, profile picture, album photo or guild picture), we keep a private copy for up to 14 days so our team can handle reports, then it is deleted automatically. A picture that is under review may be kept until the review is finished.</li>
 <li><b>Purchase records</b> (transaction ID with Player ID, no name): kept after account deletion for refunds, restoring purchases, fraud prevention and accounting</li>
 <li>Emails: no longer than needed to handle your request</li>
 <li>Deleted data may remain in our providers' backups for a short time until their regular cycle removes it</li>
@@ -90,11 +97,13 @@
 <tr><td>การรายงานและการบล็อกผู้เล่น ประวัติการตรวจสอบเนื้อหา</td><td>เกิดจากการใช้ปุ่มรายงาน/บล็อก และการตรวจของทีมงาน</td><td>ดูแลชุมชนให้ปลอดภัย</td></tr>
 <tr><td>สัญญาณกันโกง: จำนวนช่วงเวลาที่เล่นในแต่ละวัน จำนวนครั้งที่ซื้อจากผู้เล่นคนเดิม คำสั่งที่เซิร์ฟเวอร์ปฏิเสธ ประวัติการคืนเงินกับร้านค้า และประวัติการระงับบัญชี/แก้ยอด</td><td>เซิร์ฟเวอร์บันทึกระหว่างเล่น และทีมงานบันทึกเมื่อตรวจสอบ</td><td>ตรวจหาการโกงและการคืนเงินโดยมิชอบ — ระบบแค่แจ้งเตือน <b>คนเป็นผู้ตัดสินเสมอ</b> ไม่มีการลงโทษอัตโนมัติ</td></tr>
 <tr><td>หลักฐานการซื้อ (รหัสธุรกรรม/ใบเสร็จจาก Apple หรือ Google) — <b>เราไม่เห็นข้อมูลบัตรหรือการชำระเงิน</b></td><td>ร้านค้าส่งมาเมื่อคุณซื้อ</td><td>ยืนยันการซื้อ ให้ของ กู้คืนการซื้อ กันการโกงและคืนเงิน</td></tr>
-<tr><td>อีเมลและข้อความที่คุณส่งถึงเรา</td><td>เมื่อคุณติดต่อเรา</td><td>ตอบคำถาม ดำเนินการตามคำขอ</td></tr>
+<tr><td>อีเมลและข้อความที่คุณส่งถึงเรา รวมถึงข้อความจากฟอร์ม “ติดต่อทีมงาน” ในเกม (พร้อมรหัสผู้เล่น รุ่นของเกม และรุ่นเครื่อง)</td><td>เมื่อคุณติดต่อเรา</td><td>ตอบคำถาม แก้บั๊ก และปรับปรุงเกม</td></tr>
 <tr><td>ถ้าคุณเลือกเชื่อมบัญชี: รหัสบัญชีจาก Apple (Sign in with Apple) หรือ Google (Play Games) — <b>ไม่รวมชื่อ อีเมล หรือรูป</b></td><td>เมื่อคุณกด “เชื่อมบัญชี”</td><td>เพื่อให้ฟาร์มของคุณย้ายไปเครื่องใหม่ได้ และใช้ระบบเพื่อน ตลาด และกิลด์</td></tr>
 <tr><td>ข้อมูลโฆษณา: รหัสโฆษณาของเครื่อง (เฉพาะเมื่อคุณอนุญาต — บน iPhone จะถามก่อน) ข้อมูลเครื่องและแอป IP address และการดูโฆษณาจบหรือไม่</td><td>Unity LevelPlay และพันธมิตรโฆษณาเก็บเมื่อเกมโหลดหรือแสดงโฆษณา</td><td>เพื่อแสดงโฆษณาที่คุณเลือกดูเอง ให้รางวัล วัดผลโฆษณา และกันการโกงโฆษณา</td></tr>
+<tr><td>เนื้อหาโซเชียลที่คุณสร้าง: โพสต์ รูปที่คุณเลือกโพสต์หรือใส่อัลบั้ม คอมเมนต์ การถูกใจ การติดตาม รายชื่อเพื่อนสนิท ป้ายของขวัญและข้อความ ชื่ออัลบั้มและชื่อร้าน คำขอเป็นเพื่อนและข้อความ</td><td>คุณโพสต์หรือเลือกเอง</td><td>แสดงให้ผู้เล่นที่คุณเลือกเห็น (ทุกคน เพื่อน หรือเพื่อนสนิท) รูปจะถูกตรวจเนื้อหาไม่เหมาะสมก่อน</td></tr>
+<tr><td>ถ้าคุณขอเครื่องหมายยืนยันตัวตน: ลิงก์บัญชีโซเชียลสาธารณะของคุณ (เช่น Instagram, YouTube, TikTok) และรหัสที่เราให้ — <b>ไม่ใช้เอกสารยืนยันตัวตน</b></td><td>คุณส่งให้เรา</td><td>เพื่อให้ทีมงานเปิดดูบัญชีสาธารณะและยืนยันว่าเป็นของคุณ</td></tr>
 </table>
-<p>เกมนี้มี <b>เฉพาะโฆษณาแบบ “ดูเพื่อรับรางวัล” ที่คุณเลือกดูเอง</b> — ไม่มีโฆษณาบังคับหรือแบนเนอร์ โฆษณาส่งโดย <b>Unity LevelPlay</b> และพันธมิตรโฆษณา ซึ่งอาจใช้รหัสโฆษณาของเครื่องเพื่อแสดงโฆษณาที่ตรงกับคุณ บน iPhone จะทำเฉพาะเมื่อคุณอนุญาตการติดตาม คุณปิดโฆษณาตามความสนใจหรือรีเซ็ตรหัสโฆษณาได้ในการตั้งค่าเครื่อง และบน iPhone เลือก “ขอให้แอปไม่ติดตาม” ได้ <b>เราไม่ขายข้อมูลของคุณ</b> เกมไม่เข้าถึงตำแหน่ง รายชื่อติดต่อ หรือรูปภาพในเครื่อง (ยกเว้นรูปเดียวที่คุณเลือกอัปโหลดเป็นรูปโปรไฟล์)</p>
+<p>เกมนี้มี <b>เฉพาะโฆษณาแบบ “ดูเพื่อรับรางวัล” ที่คุณเลือกดูเอง</b> — ไม่มีโฆษณาบังคับหรือแบนเนอร์ โฆษณาส่งโดย <b>Unity LevelPlay</b> และพันธมิตรโฆษณา ซึ่งอาจใช้รหัสโฆษณาของเครื่องเพื่อแสดงโฆษณาที่ตรงกับคุณ บน iPhone จะทำเฉพาะเมื่อคุณอนุญาตการติดตาม คุณปิดโฆษณาตามความสนใจหรือรีเซ็ตรหัสโฆษณาได้ในการตั้งค่าเครื่อง และบน iPhone เลือก “ขอให้แอปไม่ติดตาม” ได้ <b>เราไม่ขายข้อมูลของคุณ</b> เกมไม่เข้าถึงตำแหน่ง รายชื่อติดต่อ หรือรูปภาพในเครื่อง (ยกเว้นรูปที่คุณเลือกอัปโหลดเอง: รูปโปรไฟล์ และรูปสำหรับโพสต์ อัลบั้ม หรือแชตกับเพื่อน)</p>
 
 <h3>2. ผู้ให้บริการที่ได้รับข้อมูล</h3>
 <ul>
@@ -109,12 +118,17 @@
 <p>ผู้ให้บริการเหล่านี้ใช้ข้อมูลเพื่อให้บริการแก่เราเท่านั้น และต้องคุ้มครองข้อมูลในระดับเดียวกับหรือดีกว่าที่นโยบายนี้กำหนด ข้อมูลอาจถูกเก็บบนเซิร์ฟเวอร์นอกประเทศไทย</p>
 <p>ผู้เล่นคนอื่นจะเห็นเฉพาะ: ชื่อในเกม เลขท้ายชื่อ รูป กรอบ และธงของคุณ (เมื่อคุณซื้อของจากแผงตลาดของเขา) เท่านั้น</p>
 
+<p><b>Supabase</b> ยังเก็บโพสต์ คอมเมนต์ การถูกใจ การติดตาม อัลบั้ม ป้ายของขวัญ และคำขอเครื่องหมายยืนยันตัวตนของคุณด้วย รูปที่โพสต์และรูปในอัลบั้มเปิดได้ด้วยลิงก์สาธารณะ เพื่อให้ผู้เล่นที่มีสิทธิ์เห็นดูได้</p>
+
 <h3>3. เก็บไว้นานเท่าไร</h3>
 <ul>
+<li>โพสต์ คอมเมนต์ รูปในอัลบั้ม และป้ายของขวัญ: จนกว่าคุณจะลบหรือลบบัญชี (สิ่งที่ถูกรายงานอาจถูกซ่อนระหว่างทีมงานตรวจ) · คำขอเครื่องหมายยืนยันตัวตน: จนทีมงานตัดสิน จากนั้นเก็บผลไว้ตลอดที่เครื่องหมายยังแสดงอยู่</li>
 <li>ข้อมูลบัญชีและการเล่น: เก็บจนกว่าคุณจะลบบัญชี</li>
-<li>รูปโปรไฟล์เก่า: ลบทันทีเมื่อคุณเปลี่ยนหรือเอารูปออก</li>
+<li>รูปโปรไฟล์เก่า: เก็บไว้ในอัลบั้ม “รูปโปรไฟล์” ของคุณเมื่อคุณเปลี่ยนหรือเอารูปออก จนกว่าคุณจะลบเอง (ลบได้ทุกรูปด้วยตัวเอง)</li>
 <li>รายการรายงานและการแจ้งเตือนกันโกง: ลบเมื่อทีมงานพิจารณาเสร็จ หรือเมื่อบัญชีที่เกี่ยวข้องถูกลบ</li>
+<li>ข้อความจากฟอร์ม “ติดต่อทีมงาน” ในเกม: ลบเมื่อทีมงานอ่านและดำเนินการแล้ว</li>
 <li>ประวัติการตรวจสอบ การระงับ และการแก้ยอด: เก็บจนกว่าจะลบบัญชี · บัญชีที่ถูกระงับยังขอลบได้ตามปกติ</li>
+<li><b>รูปที่คุณลบ:</b> เมื่อคุณลบรูป (รูปในโพสต์ รูปโปรไฟล์ รูปในอัลบั้ม หรือรูปกิลด์) เราเก็บสำเนาส่วนตัวไว้ได้ไม่เกิน 14 วัน เพื่อให้ทีมงานจัดการเรื่องที่ถูกรายงาน จากนั้นลบอัตโนมัติ รูปที่อยู่ระหว่างตรวจสอบอาจถูกเก็บจนกว่าการตรวจสอบจะเสร็จ</li>
 <li><b>บันทึกการซื้อ</b> (รหัสธุรกรรมคู่กับรหัสผู้เล่น ไม่มีชื่อ): เก็บไว้แม้ลบบัญชีแล้ว เพื่อใช้กับการคืนเงิน การกู้คืนการซื้อ การกันโกง และบัญชีรายรับ</li>
 <li>อีเมล: เก็บไว้ไม่เกินที่จำเป็นต่อการดำเนินเรื่อง</li>
 <li>ข้อมูลที่ลบแล้วอาจยังอยู่ในระบบสำรองของผู้ให้บริการได้ชั่วระยะเวลาสั้น ๆ ก่อนถูกลบตามรอบของผู้ให้บริการ</li>
@@ -154,8 +168,10 @@
 <tr><td>メールアドレスと、お客様からのメッセージ</td><td>お客様が当社に連絡したとき</td><td>ご質問への回答とご要望の対応のため</td></tr>
 <tr><td>アカウント連携を選んだ場合：Apple（Sign in with Apple）または Google（Play ゲーム）のアカウントID — <b>名前・メール・写真は含みません</b></td><td>「アカウント連携」をタップしたとき</td><td>新しい端末で農場を引き継ぎ、フレンド・マーケット・ギルドを使うため</td></tr>
 <tr><td>広告データ：端末の広告ID（許可した場合のみ。iPhoneでは事前に確認します）、端末・アプリ情報、IPアドレス、広告を最後まで見たかどうか</td><td>ゲームが広告を読み込む・表示する際に Unity LevelPlay と広告パートナーが収集</td><td>お客様が選んで見る広告の表示、報酬の付与、広告の効果測定と不正防止のため</td></tr>
+<tr><td>あなたが作るソーシャルの内容：投稿、投稿やアルバムに選んだ写真、コメント、いいね、フォロー、親しいフレンドのリスト、ギフトバッジとメッセージ、アルバム名とお店の名前、フレンド申請とメッセージ</td><td>あなたが投稿・選択したもの</td><td>あなたが選んだプレイヤー（全員・フレンド・親しいフレンド）に表示するため。写真は先に不適切な内容がないか確認します</td></tr>
+<tr><td>認証バッジを申請した場合：あなたの公開SNSアカウント（Instagram、YouTube、TikTokなど）のリンクと、こちらが渡すコード — <b>身分証は使いません</b></td><td>あなたが送るもの</td><td>スタッフが公開アカウントを開き、本人のものか確認するため</td></tr>
 </table>
-<p>本ゲームの広告は<b>任意の「広告を見て報酬をもらう」動画のみ</b>で、強制広告やバナーはありません。広告は <b>Unity LevelPlay</b> と広告パートナーが配信し、お客様に合った広告を表示するため端末の広告IDを使用することがあります。iPhoneではトラッキングを許可した場合のみです。端末の設定でパーソナライズ広告をオフにしたり広告IDをリセットしたりでき、iPhoneでは「Appにトラッキングしないように要求」を選べます。<b>データの販売はしません。</b>位置情報、連絡先、写真ライブラリにはアクセスしません（プロフィール画像としてお客様が選んでアップロードする1枚を除く）。</p>
+<p>本ゲームの広告は<b>任意の「広告を見て報酬をもらう」動画のみ</b>で、強制広告やバナーはありません。広告は <b>Unity LevelPlay</b> と広告パートナーが配信し、お客様に合った広告を表示するため端末の広告IDを使用することがあります。iPhoneではトラッキングを許可した場合のみです。端末の設定でパーソナライズ広告をオフにしたり広告IDをリセットしたりでき、iPhoneでは「Appにトラッキングしないように要求」を選べます。<b>データの販売はしません。</b>位置情報、連絡先、写真ライブラリにはアクセスしません（お客様が自分で選んでアップロードする画像を除く：プロフィール画像、投稿・アルバム・フレンドとのチャットの写真）。</p>
 <h3>2. データを受け取るサービス提供者</h3>
 <ul>
 <li><b>Unity Technologies</b>（Unity Gaming Services：ログイン、クラウドセーブ、ゲームサーバー）— 第1項のうちメールアドレスを除くすべてのデータ</li>
@@ -168,12 +184,16 @@
 </ul>
 <p>これらの提供者は、当社へのサービス提供のためにのみデータを利用し、本ポリシーが求める水準と同等以上でデータを保護する必要があります。データはタイ国外のサーバーに保存される場合があります。</p>
 <p>他のプレイヤーに表示されるのは、ゲーム内の名前とタグ番号、画像、フレーム、国旗のみです（お客様が相手のマーケット屋台で購入したとき）。</p>
+<p><b>Supabase</b> は投稿、コメント、いいね、フォロー、アルバム、ギフトバッジ、認証バッジの申請も保存します。投稿やアルバムの写真は、見ることを許されたプレイヤーが開けるよう公開リンクで届きます。</p>
+
 <h3>3. データの保存期間</h3>
 <ul>
+<li>投稿・コメント・アルバムの写真・ギフトバッジ：あなたが削除するかアカウントを削除するまで（報告されたものはスタッフの確認中は非表示になることがあります）・認証バッジの申請：スタッフが判断するまで。その後はバッジを表示している間、結果を保管します</li>
 <li>アカウントとゲームデータ：アカウントを削除するまで</li>
-<li>古いプロフィール画像：変更または削除した時点ですぐに削除されます</li>
+<li>古いプロフィール画像：変更または削除すると「プロフィール写真」アルバムに保管され、あなたが削除するまで残ります（どの写真もご自身で削除できます）</li>
 <li>通報と不正対策の通知：確認が完了したとき、または関係するアカウントが削除されたときに削除されます</li>
 <li>モデレーション、停止、修正の履歴：アカウントが削除されるまで保存されます · 停止中のアカウントも通常どおり削除を申請できます</li>
+<li><b>削除した画像：</b>画像（投稿の写真、プロフィール画像、アルバムの写真、ギルドの画像）を削除すると、通報への対応のため、運営チームだけが確認できる非公開のコピーを最大14日間保管し、その後自動的に削除します。確認中の画像は、確認が終わるまで保管されることがあります。</li>
 <li><b>購入記録</b>（取引IDとプレイヤーID。名前は含みません）：返金、購入の復元、不正防止、会計のため、アカウント削除後も保存されます</li>
 <li>メール：ご要望の対応に必要な期間のみ</li>
 <li>削除したデータは、提供者の通常のサイクルで消去されるまでの短い期間、バックアップに残る場合があります</li>
@@ -207,8 +227,10 @@
 <tr><td>이메일 주소와 보내주신 메시지</td><td>회사에 문의하실 때</td><td>문의에 답변하고 요청을 처리하기 위해</td></tr>
 <tr><td>계정 연동을 선택한 경우: Apple(Sign in with Apple) 또는 Google(Play 게임즈) 계정 ID — <b>이름, 이메일, 사진은 포함되지 않음</b></td><td>“계정 연동”을 누를 때</td><td>새 기기에서 농장을 이어가고 친구·마켓·길드를 이용하기 위해</td></tr>
 <tr><td>광고 데이터: 기기 광고 ID(허용한 경우에만 — iPhone에서는 먼저 묻습니다), 기기 및 앱 정보, IP 주소, 광고 시청 완료 여부</td><td>게임이 광고를 불러오거나 표시할 때 Unity LevelPlay와 광고 파트너가 수집</td><td>직접 선택해 보는 광고를 표시하고 보상을 지급하며 광고 측정과 광고 사기 방지를 위해</td></tr>
+<tr><td>직접 만드는 소셜 콘텐츠: 게시물, 게시하거나 앨범에 넣으려고 고른 사진, 댓글, 좋아요, 팔로우, 친한 친구 목록, 선물 배지와 메시지, 앨범·가게 이름, 친구 신청과 메시지</td><td>직접 올리거나 선택</td><td>선택한 플레이어(모두·친구·친한 친구)에게 보여 주기 위해. 사진은 먼저 부적절한 내용이 있는지 확인해요</td></tr>
+<tr><td>인증 배지를 신청한 경우: 공개 소셜 미디어 계정(Instagram, YouTube, TikTok 등) 링크와 저희가 드리는 코드 — <b>신분증은 받지 않아요</b></td><td>직접 보냄</td><td>운영팀이 공개 계정을 열어 본인 계정인지 확인하기 위해</td></tr>
 </table>
-<p>게임에는 <b>원할 때만 보는 “광고 보고 보상 받기” 동영상만</b> 있으며 강제 광고나 배너는 없습니다. 광고는 <b>Unity LevelPlay</b>와 광고 파트너가 제공하며, 맞춤 광고를 위해 기기 광고 ID를 사용할 수 있습니다. iPhone에서는 추적을 허용한 경우에만 그렇습니다. 기기 설정에서 맞춤 광고를 끄거나 광고 ID를 재설정할 수 있고, iPhone에서는 “앱에 추적 금지 요청”을 선택할 수 있습니다. <b>데이터를 판매하지 않습니다.</b> 위치, 연락처, 사진 보관함에는 접근하지 않습니다(프로필 사진으로 직접 업로드하는 사진 1장 제외).</p>
+<p>게임에는 <b>원할 때만 보는 “광고 보고 보상 받기” 동영상만</b> 있으며 강제 광고나 배너는 없습니다. 광고는 <b>Unity LevelPlay</b>와 광고 파트너가 제공하며, 맞춤 광고를 위해 기기 광고 ID를 사용할 수 있습니다. iPhone에서는 추적을 허용한 경우에만 그렇습니다. 기기 설정에서 맞춤 광고를 끄거나 광고 ID를 재설정할 수 있고, iPhone에서는 “앱에 추적 금지 요청”을 선택할 수 있습니다. <b>데이터를 판매하지 않습니다.</b> 위치, 연락처, 사진 보관함에는 접근하지 않습니다(직접 골라 업로드하는 사진 제외: 프로필 사진, 게시물·앨범·친구 채팅 사진).</p>
 <h3>2. 데이터를 받는 서비스 제공업체</h3>
 <ul>
 <li><b>Unity Technologies</b>(Unity Gaming Services: 로그인, 클라우드 저장, 게임 서버) — 1항의 데이터 중 이메일을 제외한 모든 데이터</li>
@@ -221,12 +243,16 @@
 </ul>
 <p>이 업체들은 회사에 서비스를 제공하기 위해서만 데이터를 사용하며, 이 방침이 요구하는 수준 이상으로 데이터를 보호해야 합니다. 데이터는 태국 밖의 서버에 저장될 수 있습니다.</p>
 <p>다른 플레이어에게는 게임 내 이름과 태그 번호, 사진, 프레임, 국기만 보입니다(상대의 마켓 가판대에서 구매할 때).</p>
+<p><b>Supabase</b>는 게시물, 댓글, 좋아요, 팔로우, 앨범, 선물 배지, 인증 배지 신청도 저장해요. 게시물과 앨범 사진은 볼 수 있는 플레이어가 열 수 있도록 공개 링크로 제공돼요.</p>
+
 <h3>3. 데이터 보관 기간</h3>
 <ul>
+<li>게시물·댓글·앨범 사진·선물 배지: 직접 삭제하거나 계정을 삭제할 때까지(신고된 항목은 확인하는 동안 숨겨질 수 있어요) · 인증 배지 신청: 운영팀이 결정할 때까지, 이후 배지가 표시되는 동안 결과를 보관</li>
 <li>계정 및 게임 데이터: 계정을 삭제할 때까지</li>
-<li>이전 프로필 사진: 변경하거나 삭제하는 즉시 삭제됩니다</li>
+<li>이전 프로필 사진: 변경하거나 삭제하면 “프로필 사진” 앨범에 보관되며 직접 삭제할 때까지 남아요 (어느 사진이든 직접 삭제할 수 있어요)</li>
 <li>신고 및 부정행위 방지 알림: 검토가 끝났을 때 또는 관련 계정이 삭제될 때 삭제됩니다</li>
 <li>검수, 정지, 정정 기록: 계정이 삭제될 때까지 보관됩니다 · 정지된 계정도 정상적으로 삭제를 요청할 수 있습니다</li>
+<li><b>삭제한 사진:</b> 사진(게시물 사진, 프로필 사진, 앨범 사진, 길드 사진)을 삭제하면 신고 처리를 위해 운영팀만 볼 수 있는 비공개 사본을 최대 14일간 보관한 뒤 자동으로 삭제합니다. 검토 중인 사진은 검토가 끝날 때까지 보관될 수 있습니다.</li>
 <li><b>구매 기록</b>(거래 ID와 플레이어 ID, 이름 없음): 환불, 구매 복원, 사기 방지, 회계를 위해 계정 삭제 후에도 보관됩니다</li>
 <li>이메일: 요청을 처리하는 데 필요한 기간 동안만</li>
 <li>삭제된 데이터는 업체의 정기 주기에 따라 제거될 때까지 짧은 기간 동안 업체의 백업에 남아 있을 수 있습니다</li>
@@ -260,8 +286,10 @@
 <tr><td>您的電子郵件地址與訊息</td><td>當您聯絡我們時</td><td>回覆並處理您的請求</td></tr>
 <tr><td>若您選擇綁定帳號：來自 Apple（Sign in with Apple）或 Google（Play 遊戲）的帳號 ID — <b>不含姓名、電子郵件或照片</b></td><td>當您點選「綁定帳號」時</td><td>讓您在新裝置上保留農場，並使用好友、市集與公會</td></tr>
 <tr><td>廣告資料：裝置廣告 ID（僅在您允許時 — iPhone 會先詢問）、裝置與應用程式資訊、IP 位址，以及是否看完廣告</td><td>遊戲載入或顯示廣告時由 Unity LevelPlay 及其廣告合作夥伴收集</td><td>用於顯示您自行選擇觀看的廣告、發放獎勵、衡量廣告成效及防止廣告詐欺</td></tr>
+<tr><td>你建立的社群內容：貼文、你選擇發佈或放進相簿的照片、留言、按讚、追蹤、摯友名單、禮物徽章與訊息、相簿與店名、好友邀請與訊息</td><td>由你發佈或選擇</td><td>顯示給你選擇的玩家（所有人、好友或摯友）；照片會先檢查是否有不當內容</td></tr>
+<tr><td>如果你申請認證標章：你公開的社群帳號連結（例如 Instagram、YouTube、TikTok）以及我們給你的驗證碼 — <b>不需要身分證件</b></td><td>由你提供</td><td>讓團隊開啟公開帳號並確認是你本人</td></tr>
 </table>
-<p>本遊戲<b>只有自願觀看的「看廣告領獎勵」影片</b>，沒有強制廣告或橫幅廣告。廣告由 <b>Unity LevelPlay</b> 及其廣告合作夥伴提供，可能使用您的裝置廣告 ID 顯示適合您的廣告；在 iPhone 上僅於您允許追蹤時才會如此。您可在裝置設定中關閉個人化廣告或重設廣告 ID，在 iPhone 上可選擇「要求 App 不要追蹤」。<b>我們不出售您的資料。</b>遊戲不會存取您的位置、聯絡人或相簿（您選擇上傳作為個人頭像的那一張照片除外）。</p>
+<p>本遊戲<b>只有自願觀看的「看廣告領獎勵」影片</b>，沒有強制廣告或橫幅廣告。廣告由 <b>Unity LevelPlay</b> 及其廣告合作夥伴提供，可能使用您的裝置廣告 ID 顯示適合您的廣告；在 iPhone 上僅於您允許追蹤時才會如此。您可在裝置設定中關閉個人化廣告或重設廣告 ID，在 iPhone 上可選擇「要求 App 不要追蹤」。<b>我們不出售您的資料。</b>遊戲不會存取您的位置、聯絡人或相簿（您自行選擇上傳的照片除外：個人頭像，以及貼文、相簿或好友聊天的照片）。</p>
 <h3>2. 取得資料的服務供應商</h3>
 <ul>
 <li><b>Unity Technologies</b>（Unity Gaming Services：登入、雲端存檔、遊戲伺服器）— 第 1 節中除電子郵件以外的所有資料</li>
@@ -274,12 +302,16 @@
 </ul>
 <p>這些供應商僅為向我們提供服務而使用資料，並且必須以不低於本政策要求的標準保護資料。資料可能儲存在泰國境外的伺服器。</p>
 <p>其他玩家只會看到您的遊戲內名稱與標籤編號、圖片、頭像框和國旗（當您向對方的市場攤位購買時）。</p>
+<p><b>Supabase</b> 也會儲存你的貼文、留言、按讚、追蹤、相簿、禮物徽章與認證申請；貼文與相簿照片可透過公開連結開啟，讓有權查看的玩家看得到。</p>
+
 <h3>3. 資料保存期限</h3>
 <ul>
+<li>貼文、留言、相簿照片與禮物徽章：直到你刪除它們或刪除帳號（被檢舉的內容在團隊審核期間可能被隱藏）· 認證申請：直到團隊做出決定，之後在標章顯示期間保留結果</li>
 <li>帳號與遊戲資料：保存至您刪除帳號為止</li>
-<li>舊的個人檔案圖片：在您更換或移除時立即刪除</li>
+<li>舊的個人頭像：更換或移除時會保存在您的「頭像」相簿，直到您刪除為止（任何一張都可以自行刪除）</li>
 <li>檢舉與防作弊警示：審查完成後，或相關帳號被刪除時刪除</li>
 <li>審核、停權與更正紀錄：保存至帳號刪除為止 · 被停權的帳號仍可照常申請刪除</li>
+<li><b>已刪除的圖片：</b>當你刪除圖片（貼文照片、個人檔案圖片、相簿照片或公會圖片）時，為了處理檢舉，我們會保留一份僅限團隊查看的私人副本，最長 14 天，之後自動刪除。審核中的圖片可能會保留到審核結束為止。</li>
 <li><b>購買紀錄</b>（交易 ID 與玩家 ID，不含姓名）：帳號刪除後仍會保留，用於退款、恢復購買、防止詐欺與會計</li>
 <li>電子郵件：僅保存至處理完您的請求所需的時間</li>
 <li>已刪除的資料可能在供應商的備份中短暫保留，直到其定期週期將其清除</li>
@@ -313,8 +345,10 @@
 <tr><td>Ihre E-Mail-Adresse und Nachrichten</td><td>Wenn Sie uns kontaktieren</td><td>Um Ihre Anfrage zu beantworten und zu bearbeiten</td></tr>
 <tr><td>Wenn du dein Konto verknüpfst: eine Konto-ID von Apple (Mit Apple anmelden) oder Google (Play Spiele) — <b>nicht dein Name, deine E-Mail oder dein Foto</b></td><td>Wenn du auf „Konto verknüpfen“ tippst</td><td>Damit du deinen Hof auf einem neuen Gerät behältst und Freunde, Markt und Gilde nutzen kannst</td></tr>
 <tr><td>Werbedaten: die Werbe-ID deines Geräts (nur wenn du es erlaubst – auf dem iPhone wirst du vorher gefragt), Geräte- und App-Informationen, IP-Adresse und ob du eine Werbung angesehen hast</td><td>Von Unity LevelPlay und seinen Werbepartnern erhoben, wenn das Spiel Werbung lädt oder zeigt</td><td>Um die freiwillige Werbung zu zeigen, die du ansehen möchtest, die Belohnung zu geben, Werbung zu messen und Werbebetrug zu verhindern</td></tr>
+<tr><td>Soziale Inhalte, die du erstellst: Beiträge, Fotos, die du postest oder in Alben legst, Kommentare, Likes, Follows, Liste enger Freunde, Geschenk-Abzeichen und ihre Nachrichten, Album- und Ladennamen, Freundschaftsanfragen und ihre Nachrichten</td><td>Du postest oder wählst es</td><td>Wird den Spielern gezeigt, die du auswählst (alle, Freunde oder enge Freunde); Fotos werden vorher auf unangemessene Inhalte geprüft</td></tr>
+<tr><td>Wenn du ein Verifiziert-Abzeichen beantragst: der Link zu einem öffentlichen Social-Media-Konto von dir (z. B. Instagram, YouTube, TikTok) und ein Code von uns — <b>keine Ausweisdokumente</b></td><td>Du sendest es</td><td>Damit unser Team das öffentliche Konto öffnen und bestätigen kann, dass es dir gehört</td></tr>
 </table>
-<p>Das Spiel zeigt <b>nur freiwillige Videos „Werbung ansehen für eine Belohnung“</b> – niemals erzwungene Werbung oder Banner. Diese Werbung wird von <b>Unity LevelPlay</b> und seinen Werbepartnern ausgeliefert, die die Werbe-ID deines Geräts nutzen können, um passende Werbung zu zeigen; auf dem iPhone nur, wenn du Tracking erlaubst. In den Geräteeinstellungen kannst du personalisierte Werbung ausschalten oder deine Werbe-ID zurücksetzen und auf dem iPhone „App bitten, kein Tracking durchzuführen“ wählen. <b>Wir verkaufen deine Daten nicht.</b> Das Spiel greift nicht auf deinen Standort, deine Kontakte oder deine Fotomediathek zu (außer auf das eine Bild, das du als Profilbild hochlädst).</p>
+<p>Das Spiel zeigt <b>nur freiwillige Videos „Werbung ansehen für eine Belohnung“</b> – niemals erzwungene Werbung oder Banner. Diese Werbung wird von <b>Unity LevelPlay</b> und seinen Werbepartnern ausgeliefert, die die Werbe-ID deines Geräts nutzen können, um passende Werbung zu zeigen; auf dem iPhone nur, wenn du Tracking erlaubst. In den Geräteeinstellungen kannst du personalisierte Werbung ausschalten oder deine Werbe-ID zurücksetzen und auf dem iPhone „App bitten, kein Tracking durchzuführen“ wählen. <b>Wir verkaufen deine Daten nicht.</b> Das Spiel greift nicht auf deinen Standort, deine Kontakte oder deine Fotomediathek zu (außer auf die Bilder, die du selbst zum Hochladen auswählst: Profilbild und Fotos für Beiträge, Alben oder den Freunde-Chat).</p>
 <h3>2. Dienstleister, die Daten erhalten</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: Anmeldung, Cloud-Speicherstand, Spielserver) — alle Daten aus Abschnitt 1 außer der E-Mail-Adresse</li>
@@ -327,12 +361,16 @@
 </ul>
 <p>Diese Dienstleister verwenden die Daten nur, um uns ihren Dienst bereitzustellen, und müssen sie mindestens so gut schützen, wie diese Erklärung es verlangt. Die Daten können auf Servern außerhalb Thailands gespeichert werden.</p>
 <p>Andere Spieler sehen nur Ihren Spielnamen mit Tag-Nummer, Ihr Bild, Ihren Rahmen und Ihre Flagge (wenn Sie an ihrem Marktstand einkaufen).</p>
+<p><b>Supabase</b> speichert außerdem deine Beiträge, Kommentare, Likes, Follows, Alben, Geschenk-Abzeichen und Verifizierungsanträge; gepostete Fotos und Albumfotos sind über einen öffentlichen Link erreichbar, damit die berechtigten Spieler sie sehen können.</p>
+
 <h3>3. Wie lange wir Daten speichern</h3>
 <ul>
+<li>Beiträge, Kommentare, Albumfotos und Geschenk-Abzeichen: bis du sie oder dein Konto löschst (gemeldete Inhalte können während der Prüfung verborgen sein) · Verifizierungsantrag: bis unser Team entscheidet, danach wird die Entscheidung aufbewahrt, solange das Abzeichen angezeigt wird</li>
 <li>Konto- und Spieldaten: bis Sie Ihr Konto löschen</li>
-<li>Alte Profilbilder: werden gelöscht, sobald Sie sie ändern oder entfernen</li>
+<li>Alte Profilbilder: bleiben beim Ändern oder Entfernen in Ihrem Album „Profilbilder“, bis Sie sie löschen (jedes Bild können Sie selbst löschen)</li>
 <li>Meldungen und Anti-Cheat-Warnungen: werden nach der Prüfung gelöscht oder wenn ein beteiligtes Konto gelöscht wird</li>
 <li>Verlauf von Moderation, Sperrungen und Korrekturen: bleibt bis zur Löschung des Kontos erhalten · gesperrte Konten können weiterhin gelöscht werden</li>
+<li><b>Gelöschte Bilder:</b> Wenn du ein Bild löschst (Beitragsfoto, Profilbild, Albumfoto oder Gildenbild), bewahren wir eine private Kopie bis zu 14 Tage auf, damit unser Team Meldungen bearbeiten kann; danach wird sie automatisch gelöscht. Ein Bild, das gerade geprüft wird, kann bis zum Abschluss der Prüfung aufbewahrt werden.</li>
 <li><b>Kaufbelege</b> (Transaktions-ID mit Spieler-ID, ohne Namen): bleiben nach der Kontolöschung für Rückerstattungen, die Wiederherstellung von Käufen, Betrugsprävention und Buchhaltung erhalten</li>
 <li>E-Mails: nicht länger als zur Bearbeitung Ihrer Anfrage nötig</li>
 <li>Gelöschte Daten können noch kurze Zeit in den Backups unserer Dienstleister verbleiben, bis deren regulärer Zyklus sie entfernt</li>
@@ -366,8 +404,10 @@
 <tr><td>Votre adresse e-mail et vos messages</td><td>Lorsque vous nous contactez</td><td>Pour répondre et traiter votre demande</td></tr>
 <tr><td>Si tu choisis de lier ton compte : un identifiant de compte Apple (Se connecter avec Apple) ou Google (Play Jeux) — <b>pas ton nom, ton e-mail ni ta photo</b></td><td>Quand tu touches « Lier le compte »</td><td>Pour garder ta ferme sur un nouvel appareil et utiliser amis, marché et guilde</td></tr>
 <tr><td>Données publicitaires : l’identifiant publicitaire de ton appareil (seulement si tu l’autorises — sur iPhone, on te le demande d’abord), des informations sur l’appareil et l’app, l’adresse IP et si tu as regardé une pub</td><td>Collectées par Unity LevelPlay et ses partenaires publicitaires quand le Jeu charge ou affiche une pub</td><td>Pour afficher les pubs facultatives que tu choisis de regarder, donner la récompense, mesurer les pubs et empêcher la fraude publicitaire</td></tr>
+<tr><td>Contenus sociaux que vous créez : publications, photos que vous publiez ou mettez dans des albums, commentaires, j'aime, abonnements, liste d'amis proches, badges cadeaux et leurs messages, noms d'albums et de boutique, demandes d'ami et leurs messages</td><td>Vous le publiez ou le choisissez</td><td>Affichés aux joueurs que vous choisissez (tous, amis ou amis proches) ; les photos sont d'abord vérifiées pour éviter les contenus inappropriés</td></tr>
+<tr><td>Si vous demandez un badge vérifié : le lien vers l'un de vos comptes publics de réseau social (ex. Instagram, YouTube, TikTok) et un code que nous vous donnons — <b>aucune pièce d'identité</b></td><td>Vous l'envoyez</td><td>Pour que notre équipe ouvre le compte public et confirme qu'il vous appartient</td></tr>
 </table>
-<p>Le Jeu affiche <b>uniquement des vidéos facultatives « regarder une pub pour une récompense »</b> — jamais de pubs imposées ni de bannières. Ces pubs sont fournies par <b>Unity LevelPlay</b> et ses partenaires publicitaires, qui peuvent utiliser l’identifiant publicitaire de ton appareil pour afficher des pubs adaptées ; sur iPhone, uniquement si tu autorises le suivi. Tu peux désactiver les pubs personnalisées ou réinitialiser ton identifiant publicitaire dans les réglages de l’appareil, et sur iPhone choisir « Demander à l’app de ne pas suivre ». <b>Nous ne vendons pas tes données.</b> Le Jeu n’accède pas à ta position, à tes contacts ni à ta photothèque (sauf à l’image que tu choisis d’envoyer comme photo de profil).</p>
+<p>Le Jeu affiche <b>uniquement des vidéos facultatives « regarder une pub pour une récompense »</b> — jamais de pubs imposées ni de bannières. Ces pubs sont fournies par <b>Unity LevelPlay</b> et ses partenaires publicitaires, qui peuvent utiliser l’identifiant publicitaire de ton appareil pour afficher des pubs adaptées ; sur iPhone, uniquement si tu autorises le suivi. Tu peux désactiver les pubs personnalisées ou réinitialiser ton identifiant publicitaire dans les réglages de l’appareil, et sur iPhone choisir « Demander à l’app de ne pas suivre ». <b>Nous ne vendons pas tes données.</b> Le Jeu n’accède pas à ta position, à tes contacts ni à ta photothèque (sauf aux images que tu choisis toi-même d’envoyer : photo de profil et photos pour les publications, albums ou le chat entre amis).</p>
 <h3>2. Prestataires qui reçoivent des données</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services : connexion, sauvegarde cloud, serveurs de jeu) — toutes les données de la section 1 sauf l'e-mail</li>
@@ -380,12 +420,16 @@
 </ul>
 <p>Ces prestataires n'utilisent les données que pour nous fournir leur service et doivent les protéger au moins aussi bien que l'exige la présente politique. Les données peuvent être stockées sur des serveurs situés hors de Thaïlande.</p>
 <p>Les autres joueurs ne voient que votre nom en jeu et son numéro de tag, votre image, votre cadre et votre drapeau (lorsque vous achetez à leur étal du marché).</p>
+<p><b>Supabase</b> stocke aussi vos publications, commentaires, j'aime, abonnements, albums, badges cadeaux et demandes de badge vérifié ; les photos publiées et celles des albums sont accessibles par un lien public pour que les joueurs autorisés puissent les voir.</p>
+
 <h3>3. Durée de conservation</h3>
 <ul>
+<li>Publications, commentaires, photos d'album et badges cadeaux : jusqu'à ce que vous les supprimiez ou supprimiez votre compte (un contenu signalé peut être masqué pendant la vérification) · demande de badge vérifié : jusqu'à la décision de l'équipe, puis la décision est conservée tant que le badge est affiché</li>
 <li>Données de compte et de jeu : jusqu'à la suppression de votre compte</li>
-<li>Anciennes photos de profil : supprimées dès que vous les changez ou les retirez</li>
+<li>Anciennes photos de profil : conservées dans votre album « Photos de profil » quand vous les changez ou les retirez, jusqu'à ce que vous les supprimiez (vous pouvez supprimer chacune vous-même)</li>
 <li>Signalements et alertes anti-triche : supprimés une fois examinés, ou lorsqu'un compte concerné est supprimé</li>
 <li>Historique de modération, de suspension et de correction : conservé jusqu'à la suppression du compte · les comptes suspendus peuvent quand même être supprimés</li>
+<li><b>Images supprimées :</b> lorsque vous supprimez une image (photo de publication, photo de profil, photo d'album ou image de guilde), nous en conservons une copie privée jusqu'à 14 jours afin que notre équipe puisse traiter les signalements, puis elle est supprimée automatiquement. Une image en cours d'examen peut être conservée jusqu'à la fin de l'examen.</li>
 <li><b>Justificatifs d'achat</b> (identifiant de transaction avec l'identifiant de joueur, sans nom) : conservés après la suppression du compte pour les remboursements, la restauration des achats, la prévention de la fraude et la comptabilité</li>
 <li>E-mails : pas plus longtemps que nécessaire pour traiter votre demande</li>
 <li>Les données supprimées peuvent rester brièvement dans les sauvegardes de nos prestataires jusqu'à ce que leur cycle habituel les efface</li>
@@ -419,8 +463,10 @@
 <tr><td>Tu dirección de correo y tus mensajes</td><td>Cuando nos contactas</td><td>Para responder y gestionar tu solicitud</td></tr>
 <tr><td>Si eliges vincular tu cuenta: un ID de cuenta de Apple (Iniciar sesión con Apple) o Google (Play Juegos) — <b>no tu nombre, correo ni foto</b></td><td>Cuando tocas «Vincular cuenta»</td><td>Para conservar tu granja en un dispositivo nuevo y usar amigos, mercado y gremio</td></tr>
 <tr><td>Datos publicitarios: el ID de publicidad de tu dispositivo (solo si lo permites; en iPhone se te pregunta antes), información del dispositivo y la app, dirección IP y si viste un anuncio</td><td>Los recopilan Unity LevelPlay y sus socios publicitarios cuando el Juego carga o muestra un anuncio</td><td>Para mostrar los anuncios opcionales que eliges ver, dar la recompensa, medir los anuncios y evitar el fraude publicitario</td></tr>
+<tr><td>Contenido social que creas: publicaciones, fotos que eliges publicar o poner en álbumes, comentarios, me gusta, seguimientos, lista de mejores amigos, insignias de regalo y sus mensajes, nombres de álbumes y de tienda, solicitudes de amistad y sus mensajes</td><td>Lo publicas o eliges tú</td><td>Se muestra a los jugadores que eliges (todos, amigos o mejores amigos); las fotos se revisan antes para evitar contenido inapropiado</td></tr>
+<tr><td>Si pides una insignia verificada: el enlace a una cuenta pública tuya en redes sociales (p. ej. Instagram, YouTube, TikTok) y un código que te damos — <b>sin documentos de identidad</b></td><td>Lo envías tú</td><td>Para que nuestro equipo abra la cuenta pública y confirme que es tuya</td></tr>
 </table>
-<p>El Juego muestra <b>solo videos opcionales de «ver un anuncio para obtener una recompensa»</b>, nunca anuncios forzados ni banners. Estos anuncios los ofrecen <b>Unity LevelPlay</b> y sus socios publicitarios, que pueden usar el ID de publicidad de tu dispositivo para mostrarte anuncios adecuados; en iPhone, solo si permites el rastreo. Puedes desactivar los anuncios personalizados o restablecer tu ID de publicidad en los ajustes del dispositivo y, en iPhone, elegir «Pedir a la app que no rastree». <b>No vendemos tus datos.</b> El Juego no accede a tu ubicación, contactos ni fototeca (salvo la imagen que elijas subir como foto de perfil).</p>
+<p>El Juego muestra <b>solo videos opcionales de «ver un anuncio para obtener una recompensa»</b>, nunca anuncios forzados ni banners. Estos anuncios los ofrecen <b>Unity LevelPlay</b> y sus socios publicitarios, que pueden usar el ID de publicidad de tu dispositivo para mostrarte anuncios adecuados; en iPhone, solo si permites el rastreo. Puedes desactivar los anuncios personalizados o restablecer tu ID de publicidad en los ajustes del dispositivo y, en iPhone, elegir «Pedir a la app que no rastree». <b>No vendemos tus datos.</b> El Juego no accede a tu ubicación, contactos ni fototeca (salvo las imágenes que elijas subir: foto de perfil y fotos para publicaciones, álbumes o el chat con amigos).</p>
 <h3>2. Proveedores de servicios que reciben datos</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: inicio de sesión, guardado en la nube, servidores de juego) — todos los datos de la sección 1 excepto el correo</li>
@@ -433,12 +479,16 @@
 </ul>
 <p>Estos proveedores usan los datos solo para prestarnos su servicio y deben protegerlos al menos tan bien como exige esta política. Los datos pueden almacenarse en servidores fuera de Tailandia.</p>
 <p>Los demás jugadores solo ven tu nombre en el juego con su número de etiqueta, tu imagen, tu marco y tu bandera (cuando compras en su puesto del mercado).</p>
+<p><b>Supabase</b> también guarda tus publicaciones, comentarios, me gusta, seguimientos, álbumes, insignias de regalo y solicitudes de verificación; las fotos publicadas y de álbumes se abren con un enlace público para que las vean los jugadores autorizados.</p>
+
 <h3>3. Cuánto tiempo conservamos los datos</h3>
 <ul>
+<li>Publicaciones, comentarios, fotos de álbumes e insignias de regalo: hasta que los borres o borres tu cuenta (lo reportado puede ocultarse mientras se revisa) · solicitud de verificación: hasta que el equipo decida; después se guarda la decisión mientras se muestre la insignia</li>
 <li>Datos de cuenta y de juego: hasta que elimines tu cuenta</li>
-<li>Fotos de perfil antiguas: se eliminan en cuanto las cambias o las quitas</li>
+<li>Fotos de perfil antiguas: se guardan en tu álbum «Fotos de perfil» cuando las cambias o las quitas, hasta que las borres (puedes borrar cualquiera tú mismo)</li>
 <li>Denuncias y alertas antitrampas: se eliminan una vez revisadas, o cuando se elimina una cuenta implicada</li>
 <li>Historial de moderación, suspensión y correcciones: se conserva hasta que se elimine la cuenta · las cuentas suspendidas también pueden eliminarse</li>
+<li><b>Imágenes eliminadas:</b> cuando eliminas una imagen (foto de una publicación, foto de perfil, foto de álbum o imagen de gremio), conservamos una copia privada hasta 14 días para que nuestro equipo pueda gestionar denuncias; después se elimina automáticamente. Una imagen en revisión puede conservarse hasta que termine la revisión.</li>
 <li><b>Registros de compra</b> (ID de transacción con ID de jugador, sin nombre): se conservan tras eliminar la cuenta para reembolsos, restauración de compras, prevención del fraude y contabilidad</li>
 <li>Correos: no más tiempo del necesario para gestionar tu solicitud</li>
 <li>Los datos eliminados pueden permanecer un tiempo breve en las copias de seguridad de nuestros proveedores hasta que su ciclo habitual los borre</li>
@@ -472,8 +522,10 @@
 <tr><td>Seu endereço de e-mail e suas mensagens</td><td>Quando você entra em contato conosco</td><td>Para responder e tratar sua solicitação</td></tr>
 <tr><td>Se você escolher vincular sua conta: um ID de conta da Apple (Iniciar sessão com a Apple) ou do Google (Play Games) — <b>não seu nome, e-mail ou foto</b></td><td>Quando você toca em “Vincular conta”</td><td>Para manter sua fazenda em um novo aparelho e usar amigos, mercado e guilda</td></tr>
 <tr><td>Dados de publicidade: o ID de publicidade do aparelho (só se você permitir — no iPhone você é perguntado antes), informações do aparelho e do app, endereço IP e se você assistiu a um anúncio</td><td>Coletados pelo Unity LevelPlay e seus parceiros de anúncios quando o Jogo carrega ou mostra um anúncio</td><td>Para mostrar os anúncios opcionais que você escolhe assistir, dar a recompensa, medir anúncios e evitar fraude de anúncios</td></tr>
+<tr><td>Conteúdo social que você cria: publicações, fotos que você publica ou coloca em álbuns, comentários, curtidas, quem você segue, lista de amigos próximos, selos de presente e mensagens, nomes de álbuns e da loja, pedidos de amizade e mensagens</td><td>Você publica ou escolhe</td><td>Mostrado aos jogadores que você escolher (todos, amigos ou amigos próximos); as fotos são verificadas antes para evitar conteúdo impróprio</td></tr>
+<tr><td>Se você pedir um selo de verificado: o link de uma conta pública sua em rede social (ex.: Instagram, YouTube, TikTok) e um código que damos a você — <b>sem documentos de identidade</b></td><td>Você envia</td><td>Para nossa equipe abrir a conta pública e confirmar que é sua</td></tr>
 </table>
-<p>O Jogo mostra <b>apenas vídeos opcionais de “assistir a um anúncio para ganhar uma recompensa”</b> — nunca anúncios forçados ou banners. Esses anúncios são entregues pelo <b>Unity LevelPlay</b> e seus parceiros de anúncios, que podem usar o ID de publicidade do seu aparelho para mostrar anúncios adequados; no iPhone, só se você permitir o rastreamento. Você pode desativar anúncios personalizados ou redefinir seu ID de publicidade nas configurações do aparelho e, no iPhone, escolher “Pedir ao app para não rastrear”. <b>Não vendemos seus dados.</b> O Jogo não acessa sua localização, contatos ou galeria de fotos (exceto a imagem que você escolher enviar como foto de perfil).</p>
+<p>O Jogo mostra <b>apenas vídeos opcionais de “assistir a um anúncio para ganhar uma recompensa”</b> — nunca anúncios forçados ou banners. Esses anúncios são entregues pelo <b>Unity LevelPlay</b> e seus parceiros de anúncios, que podem usar o ID de publicidade do seu aparelho para mostrar anúncios adequados; no iPhone, só se você permitir o rastreamento. Você pode desativar anúncios personalizados ou redefinir seu ID de publicidade nas configurações do aparelho e, no iPhone, escolher “Pedir ao app para não rastrear”. <b>Não vendemos seus dados.</b> O Jogo não acessa sua localização, contatos ou galeria de fotos (exceto as imagens que você escolher enviar: foto de perfil e fotos para publicações, álbuns ou chat com amigos).</p>
 <h3>2. Prestadores de serviço que recebem dados</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: login, salvamento na nuvem, servidores do jogo) — todos os dados da seção 1, exceto o e-mail</li>
@@ -486,12 +538,16 @@
 </ul>
 <p>Esses prestadores usam os dados apenas para nos prestar o serviço e devem protegê-los pelo menos tão bem quanto esta política exige. Os dados podem ser armazenados em servidores fora da Tailândia.</p>
 <p>Os outros jogadores veem apenas seu nome no jogo e o número da tag, sua imagem, sua moldura e sua bandeira (quando você compra na banca de mercado deles).</p>
+<p>O <b>Supabase</b> também guarda suas publicações, comentários, curtidas, quem você segue, álbuns, selos de presente e pedidos de verificação; fotos publicadas e de álbuns abrem por link público para que os jogadores autorizados as vejam.</p>
+
 <h3>3. Por quanto tempo guardamos os dados</h3>
 <ul>
+<li>Publicações, comentários, fotos de álbuns e selos de presente: até você apagá-los ou apagar a conta (algo denunciado pode ficar oculto durante a análise) · pedido de verificação: até a equipe decidir; depois a decisão é guardada enquanto o selo aparecer</li>
 <li>Dados da conta e do jogo: até você excluir sua conta</li>
-<li>Fotos de perfil antigas: excluídas assim que você as troca ou remove</li>
+<li>Fotos de perfil antigas: ficam no seu álbum “Fotos de perfil” quando você as troca ou remove, até você apagá-las (você pode apagar qualquer uma)</li>
 <li>Denúncias e alertas antitrapaça: excluídos após a análise ou quando uma conta envolvida é excluída</li>
 <li>Histórico de moderação, suspensão e correção: mantido até a conta ser excluída · contas suspensas também podem ser excluídas</li>
+<li><b>Imagens excluídas:</b> quando você exclui uma imagem (foto de publicação, foto de perfil, foto de álbum ou imagem de guilda), guardamos uma cópia privada por até 14 dias para que nossa equipe possa tratar denúncias; depois ela é excluída automaticamente. Uma imagem em análise pode ser mantida até o fim da análise.</li>
 <li><b>Registros de compra</b> (ID da transação com o ID do jogador, sem nome): mantidos após a exclusão da conta para reembolsos, restauração de compras, prevenção de fraudes e contabilidade</li>
 <li>E-mails: não mais do que o necessário para tratar sua solicitação</li>
 <li>Os dados excluídos podem permanecer por um curto período nos backups dos nossos prestadores até que o ciclo regular deles os remova</li>
@@ -525,8 +581,10 @@
 <tr><td>Alamat email dan pesan Anda</td><td>Saat Anda menghubungi kami</td><td>Untuk menjawab dan menangani permintaan Anda</td></tr>
 <tr><td>Jika kamu memilih menautkan akun: ID akun dari Apple (Sign in with Apple) atau Google (Play Game) — <b>bukan nama, email, atau fotomu</b></td><td>Saat kamu mengetuk “Tautkan akun”</td><td>Agar kebunmu tetap ada di perangkat baru dan kamu bisa memakai teman, pasar, dan guild</td></tr>
 <tr><td>Data iklan: ID iklan perangkatmu (hanya jika kamu mengizinkan — di iPhone kamu ditanya dulu), informasi perangkat dan aplikasi, alamat IP, dan apakah kamu menonton iklan</td><td>Dikumpulkan oleh Unity LevelPlay dan mitra iklannya saat Game memuat atau menampilkan iklan</td><td>Untuk menampilkan iklan opsional yang kamu pilih untuk ditonton, memberi hadiah, mengukur iklan, dan mencegah penipuan iklan</td></tr>
+<tr><td>Konten sosial yang kamu buat: postingan, foto yang kamu pilih untuk diposting atau dimasukkan ke album, komentar, suka, ikuti, daftar teman dekat, lencana hadiah dan pesannya, nama album dan toko, permintaan teman dan pesannya</td><td>Kamu memposting atau memilihnya</td><td>Ditampilkan ke pemain yang kamu pilih (semua, teman, atau teman dekat); foto diperiksa dulu dari konten tidak pantas</td></tr>
+<tr><td>Jika kamu meminta lencana terverifikasi: tautan akun media sosial publikmu (mis. Instagram, YouTube, TikTok) dan kode dari kami — <b>tanpa dokumen identitas</b></td><td>Kamu mengirimnya</td><td>Agar tim kami bisa membuka akun publik itu dan memastikan itu milikmu</td></tr>
 </table>
-<p>Game ini <b>hanya menampilkan video opsional “tonton iklan untuk hadiah”</b> — tidak pernah iklan paksa atau banner. Iklan disajikan oleh <b>Unity LevelPlay</b> dan mitra iklannya, yang dapat memakai ID iklan perangkatmu untuk menampilkan iklan yang sesuai; di iPhone hanya jika kamu mengizinkan pelacakan. Kamu bisa mematikan iklan yang dipersonalisasi atau mereset ID iklan di pengaturan perangkat, dan di iPhone memilih “Minta App untuk Tidak Melacak”. <b>Kami tidak menjual datamu.</b> Game tidak mengakses lokasi, kontak, atau galeri fotomu (kecuali satu gambar yang kamu pilih untuk diunggah sebagai foto profil).</p>
+<p>Game ini <b>hanya menampilkan video opsional “tonton iklan untuk hadiah”</b> — tidak pernah iklan paksa atau banner. Iklan disajikan oleh <b>Unity LevelPlay</b> dan mitra iklannya, yang dapat memakai ID iklan perangkatmu untuk menampilkan iklan yang sesuai; di iPhone hanya jika kamu mengizinkan pelacakan. Kamu bisa mematikan iklan yang dipersonalisasi atau mereset ID iklan di pengaturan perangkat, dan di iPhone memilih “Minta App untuk Tidak Melacak”. <b>Kami tidak menjual datamu.</b> Game tidak mengakses lokasi, kontak, atau galeri fotomu (kecuali gambar yang kamu pilih sendiri untuk diunggah: foto profil serta foto untuk postingan, album, atau obrolan teman).</p>
 <h3>2. Penyedia layanan yang menerima data</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: masuk, simpan cloud, server game) — semua data di bagian 1 kecuali email</li>
@@ -539,12 +597,16 @@
 </ul>
 <p>Penyedia ini menggunakan data hanya untuk memberikan layanan kepada kami dan wajib melindunginya setidaknya sebaik yang disyaratkan kebijakan ini. Data dapat disimpan di server di luar Thailand.</p>
 <p>Pemain lain hanya melihat nama dalam game dan nomor tag, gambar, bingkai, dan bendera Anda (saat Anda membeli dari lapak pasar mereka).</p>
+<p><b>Supabase</b> juga menyimpan postingan, komentar, suka, ikuti, album, lencana hadiah, dan permintaan verifikasimu; foto postingan dan album dapat dibuka lewat tautan publik agar pemain yang berhak bisa melihatnya.</p>
+
 <h3>3. Berapa lama kami menyimpan data</h3>
 <ul>
+<li>Postingan, komentar, foto album, dan lencana hadiah: sampai kamu menghapusnya atau menghapus akun (yang dilaporkan bisa disembunyikan selama diperiksa) · permintaan verifikasi: sampai tim memutuskan, lalu keputusannya disimpan selama lencana tampil</li>
 <li>Data akun dan permainan: sampai Anda menghapus akun</li>
-<li>Foto profil lama: dihapus segera setelah Anda menggantinya atau menghapusnya</li>
+<li>Foto profil lama: disimpan di album “Foto profil” milikmu saat kamu menggantinya atau menghapusnya, sampai kamu menghapusnya (kamu bisa menghapus yang mana pun sendiri)</li>
 <li>Laporan dan peringatan anti-curang: dihapus setelah ditinjau, atau saat akun yang terkait dihapus</li>
 <li>Riwayat moderasi, penangguhan, dan koreksi: disimpan sampai akun dihapus · akun yang ditangguhkan tetap bisa dihapus</li>
+<li><b>Gambar yang dihapus:</b> saat Anda menghapus gambar (foto postingan, foto profil, foto album, atau gambar guild), kami menyimpan salinan pribadi hingga 14 hari agar tim kami dapat menangani laporan, lalu dihapus otomatis. Gambar yang sedang ditinjau dapat disimpan sampai peninjauan selesai.</li>
 <li><b>Catatan pembelian</b> (ID transaksi dengan ID Pemain, tanpa nama): disimpan setelah akun dihapus untuk pengembalian dana, pemulihan pembelian, pencegahan penipuan, dan pembukuan</li>
 <li>Email: tidak lebih lama dari yang diperlukan untuk menangani permintaan Anda</li>
 <li>Data yang dihapus mungkin masih tersimpan sebentar di cadangan penyedia kami sampai siklus rutin mereka menghapusnya</li>
@@ -578,8 +640,10 @@
 <tr><td>Địa chỉ email và tin nhắn của bạn</td><td>Khi bạn liên hệ với chúng tôi</td><td>Để trả lời và xử lý yêu cầu của bạn</td></tr>
 <tr><td>Nếu bạn chọn liên kết tài khoản: ID tài khoản từ Apple (Đăng nhập bằng Apple) hoặc Google (Play Games) — <b>không gồm tên, email hay ảnh của bạn</b></td><td>Khi bạn nhấn “Liên kết tài khoản”</td><td>Để giữ nông trại khi đổi máy và dùng bạn bè, chợ, hội</td></tr>
 <tr><td>Dữ liệu quảng cáo: ID quảng cáo của thiết bị (chỉ khi bạn cho phép — trên iPhone sẽ hỏi trước), thông tin thiết bị và ứng dụng, địa chỉ IP và việc bạn đã xem hết quảng cáo hay chưa</td><td>Unity LevelPlay và các đối tác quảng cáo thu thập khi Trò chơi tải hoặc hiển thị quảng cáo</td><td>Để hiển thị quảng cáo tùy chọn bạn chọn xem, trao phần thưởng, đo lường quảng cáo và chống gian lận quảng cáo</td></tr>
+<tr><td>Nội dung mạng xã hội bạn tạo: bài đăng, ảnh bạn chọn đăng hoặc cho vào album, bình luận, lượt thích, theo dõi, danh sách bạn thân, huy hiệu quà và lời nhắn, tên album và cửa hàng, lời mời kết bạn và lời nhắn</td><td>Bạn đăng hoặc chọn</td><td>Hiển thị cho người chơi bạn chọn (mọi người, bạn bè hoặc bạn thân); ảnh được kiểm tra nội dung không phù hợp trước</td></tr>
+<tr><td>Nếu bạn xin huy hiệu xác minh: liên kết tới tài khoản mạng xã hội công khai của bạn (vd Instagram, YouTube, TikTok) và mã chúng tôi đưa — <b>không cần giấy tờ tùy thân</b></td><td>Bạn gửi</td><td>Để đội ngũ mở tài khoản công khai và xác nhận đó là của bạn</td></tr>
 </table>
-<p>Trò chơi <b>chỉ có video tùy chọn “xem quảng cáo để nhận thưởng”</b> — không bao giờ có quảng cáo bắt buộc hay banner. Quảng cáo do <b>Unity LevelPlay</b> và các đối tác quảng cáo cung cấp, họ có thể dùng ID quảng cáo của thiết bị để hiển thị quảng cáo phù hợp; trên iPhone chỉ khi bạn cho phép theo dõi. Bạn có thể tắt quảng cáo cá nhân hóa hoặc đặt lại ID quảng cáo trong cài đặt thiết bị, và trên iPhone chọn “Yêu cầu ứng dụng không theo dõi”. <b>Chúng tôi không bán dữ liệu của bạn.</b> Trò chơi không truy cập vị trí, danh bạ hay thư viện ảnh của bạn (trừ một ảnh bạn chọn tải lên làm ảnh đại diện).</p>
+<p>Trò chơi <b>chỉ có video tùy chọn “xem quảng cáo để nhận thưởng”</b> — không bao giờ có quảng cáo bắt buộc hay banner. Quảng cáo do <b>Unity LevelPlay</b> và các đối tác quảng cáo cung cấp, họ có thể dùng ID quảng cáo của thiết bị để hiển thị quảng cáo phù hợp; trên iPhone chỉ khi bạn cho phép theo dõi. Bạn có thể tắt quảng cáo cá nhân hóa hoặc đặt lại ID quảng cáo trong cài đặt thiết bị, và trên iPhone chọn “Yêu cầu ứng dụng không theo dõi”. <b>Chúng tôi không bán dữ liệu của bạn.</b> Trò chơi không truy cập vị trí, danh bạ hay thư viện ảnh của bạn (trừ những ảnh bạn tự chọn tải lên: ảnh đại diện và ảnh cho bài đăng, album hoặc trò chuyện với bạn bè).</p>
 <h3>2. Nhà cung cấp dịch vụ nhận dữ liệu</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: đăng nhập, lưu đám mây, máy chủ trò chơi) — toàn bộ dữ liệu ở mục 1 trừ email</li>
@@ -592,12 +656,16 @@
 </ul>
 <p>Các nhà cung cấp này chỉ dùng dữ liệu để cung cấp dịch vụ cho chúng tôi và phải bảo vệ dữ liệu ít nhất ở mức chính sách này yêu cầu. Dữ liệu có thể được lưu trên máy chủ bên ngoài Thái Lan.</p>
 <p>Người chơi khác chỉ thấy tên trong game cùng số thẻ, ảnh, khung và quốc kỳ của bạn (khi bạn mua ở quầy chợ của họ).</p>
+<p><b>Supabase</b> cũng lưu bài đăng, bình luận, lượt thích, theo dõi, album, huy hiệu quà và yêu cầu xác minh của bạn; ảnh đã đăng và ảnh album mở được bằng liên kết công khai để người chơi có quyền xem.</p>
+
 <h3>3. Chúng tôi lưu dữ liệu trong bao lâu</h3>
 <ul>
+<li>Bài đăng, bình luận, ảnh album và huy hiệu quà: đến khi bạn xóa chúng hoặc xóa tài khoản (nội dung bị báo cáo có thể bị ẩn khi đang kiểm tra) · yêu cầu xác minh: đến khi đội ngũ quyết định, sau đó lưu kết quả trong thời gian huy hiệu còn hiển thị</li>
 <li>Dữ liệu tài khoản và trò chơi: cho đến khi bạn xóa tài khoản</li>
-<li>Ảnh hồ sơ cũ: bị xóa ngay khi bạn đổi hoặc gỡ ảnh</li>
+<li>Ảnh hồ sơ cũ: được giữ trong album “Ảnh hồ sơ” của bạn khi bạn đổi hoặc gỡ ảnh, cho đến khi bạn xóa (bạn tự xóa được bất kỳ ảnh nào)</li>
 <li>Báo cáo và cảnh báo chống gian lận: bị xóa sau khi xem xét xong, hoặc khi tài khoản liên quan bị xóa</li>
 <li>Lịch sử kiểm duyệt, tạm khóa và điều chỉnh: được giữ cho đến khi tài khoản bị xóa · tài khoản bị tạm khóa vẫn có thể xóa</li>
+<li><b>Ảnh đã xóa:</b> khi bạn xóa một ảnh (ảnh bài đăng, ảnh hồ sơ, ảnh album hoặc ảnh bang hội), chúng tôi giữ một bản sao riêng tư tối đa 14 ngày để đội ngũ xử lý các báo cáo, sau đó tự động xóa. Ảnh đang được xem xét có thể được giữ đến khi việc xem xét hoàn tất.</li>
 <li><b>Hồ sơ mua hàng</b> (mã giao dịch kèm ID người chơi, không có tên): được giữ lại sau khi xóa tài khoản để hoàn tiền, khôi phục giao dịch mua, ngăn gian lận và kế toán</li>
 <li>Email: không lâu hơn mức cần thiết để xử lý yêu cầu của bạn</li>
 <li>Dữ liệu đã xóa có thể còn trong bản sao lưu của các nhà cung cấp trong một thời gian ngắn cho đến khi chu kỳ thông thường của họ xóa đi</li>
@@ -631,8 +699,10 @@
 <tr><td>Ваш адрес электронной почты и сообщения</td><td>Когда вы связываетесь с нами</td><td>Чтобы ответить и обработать ваш запрос</td></tr>
 <tr><td>Если вы решите привязать аккаунт: ID аккаунта Apple (Вход с Apple) или Google (Play Игры) — <b>без имени, e-mail и фото</b></td><td>Когда вы нажимаете «Привязать аккаунт»</td><td>Чтобы сохранить ферму на новом устройстве и пользоваться друзьями, рынком и гильдией</td></tr>
 <tr><td>Рекламные данные: рекламный ID устройства (только если вы разрешите — на iPhone сначала спросят), сведения об устройстве и приложении, IP-адрес и то, досмотрели ли вы рекламу</td><td>Собираются Unity LevelPlay и его рекламными партнёрами, когда Игра загружает или показывает рекламу</td><td>Чтобы показывать необязательную рекламу, которую вы сами решили посмотреть, выдавать награду, измерять рекламу и бороться с рекламным мошенничеством</td></tr>
+<tr><td>Социальный контент, который вы создаёте: записи, фото, которые вы публикуете или кладёте в альбомы, комментарии, лайки, подписки, список близких друзей, значки-подарки и их сообщения, названия альбомов и лавки, заявки в друзья и их сообщения</td><td>Вы публикуете или выбираете</td><td>Показывается выбранным вами игрокам (все, друзья или близкие друзья); фото заранее проверяются на недопустимое содержание</td></tr>
+<tr><td>Если вы запрашиваете значок подтверждения: ссылка на ваш публичный аккаунт в соцсети (например, Instagram, YouTube, TikTok) и код, который мы даём — <b>без документов</b></td><td>Вы отправляете</td><td>Чтобы команда открыла публичный аккаунт и убедилась, что он ваш</td></tr>
 </table>
-<p>В Игре есть <b>только необязательные видео «посмотри рекламу — получи награду»</b>, никакой принудительной рекламы и баннеров. Рекламу показывают <b>Unity LevelPlay</b> и его рекламные партнёры, которые могут использовать рекламный ID устройства для подходящей вам рекламы; на iPhone — только если вы разрешите отслеживание. В настройках устройства можно отключить персонализированную рекламу или сбросить рекламный ID, а на iPhone выбрать «Попросить приложение не отслеживать». <b>Мы не продаём ваши данные.</b> Игра не получает доступ к вашему местоположению, контактам и фотогалерее (кроме одного изображения, которое вы сами загружаете как фото профиля).</p>
+<p>В Игре есть <b>только необязательные видео «посмотри рекламу — получи награду»</b>, никакой принудительной рекламы и баннеров. Рекламу показывают <b>Unity LevelPlay</b> и его рекламные партнёры, которые могут использовать рекламный ID устройства для подходящей вам рекламы; на iPhone — только если вы разрешите отслеживание. В настройках устройства можно отключить персонализированную рекламу или сбросить рекламный ID, а на iPhone выбрать «Попросить приложение не отслеживать». <b>Мы не продаём ваши данные.</b> Игра не получает доступ к вашему местоположению, контактам и фотогалерее (кроме изображений, которые вы сами выбираете для загрузки: фото профиля и фото для записей, альбомов или чата с друзьями).</p>
 <h3>2. Поставщики услуг, получающие данные</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: вход, облачные сохранения, игровые серверы) — все данные из раздела 1, кроме электронной почты</li>
@@ -645,12 +715,16 @@
 </ul>
 <p>Эти поставщики используют данные только для оказания нам услуг и обязаны защищать их не хуже, чем требует эта политика. Данные могут храниться на серверах за пределами Таиланда.</p>
 <p>Другие игроки видят только ваше игровое имя с номером тега, изображение, рамку и флаг (когда вы покупаете у них на рынке).</p>
+<p><b>Supabase</b> также хранит ваши записи, комментарии, лайки, подписки, альбомы, значки-подарки и запросы подтверждения; опубликованные фото и фото альбомов доступны по публичной ссылке, чтобы их видели игроки, которым это разрешено.</p>
+
 <h3>3. Как долго мы храним данные</h3>
 <ul>
+<li>Записи, комментарии, фото альбомов и значки-подарки: пока вы не удалите их или аккаунт (то, на что пожаловались, может быть скрыто на время проверки) · запрос подтверждения: до решения команды, затем решение хранится, пока значок показывается</li>
 <li>Данные аккаунта и игры: пока вы не удалите аккаунт</li>
-<li>Старые фото профиля: удаляются сразу после того, как вы их замените или уберёте</li>
+<li>Старые фото профиля: сохраняются в вашем альбоме «Фото профиля», когда вы их заменяете или убираете, пока вы их не удалите (любое фото можно удалить самому)</li>
 <li>Жалобы и античит-оповещения: удаляются после рассмотрения или при удалении связанного аккаунта</li>
 <li>История модерации, блокировок и корректировок: хранится до удаления аккаунта · заблокированные аккаунты тоже можно удалить</li>
+<li><b>Удалённые изображения:</b> когда вы удаляете изображение (фото в записи, фото профиля, фото в альбоме или изображение гильдии), мы храним закрытую копию до 14 дней, чтобы команда могла обработать жалобы, после чего она автоматически удаляется. Изображение, находящееся на проверке, может храниться до её завершения.</li>
 <li><b>Записи о покупках</b> (ID транзакции вместе с ID игрока, без имени): сохраняются после удаления аккаунта для возвратов, восстановления покупок, предотвращения мошенничества и бухгалтерского учёта</li>
 <li>Электронные письма: не дольше, чем нужно для обработки вашего запроса</li>
 <li>Удалённые данные могут некоторое время оставаться в резервных копиях наших поставщиков, пока их обычный цикл не удалит их</li>
@@ -684,8 +758,10 @@
 <tr><td>عنوان بريدك الإلكتروني ورسائلك</td><td>عندما تتواصل معنا</td><td>للرد على طلبك ومعالجته</td></tr>
 <tr><td>إذا اخترت ربط حسابك: معرّف حساب من Apple (تسجيل الدخول باستخدام Apple) أو Google (ألعاب Play) — <b>وليس اسمك أو بريدك أو صورتك</b></td><td>عند الضغط على «ربط الحساب»</td><td>لتحتفظ بمزرعتك على جهاز جديد وتستخدم الأصدقاء والسوق والنقابة</td></tr>
 <tr><td>بيانات الإعلانات: المعرّف الإعلاني لجهازك (فقط إذا سمحت — على iPhone نسألك أولًا)، ومعلومات الجهاز والتطبيق، وعنوان IP، وما إذا شاهدت إعلانًا</td><td>تجمعها Unity LevelPlay وشركاؤها الإعلانيون عندما تحمّل اللعبة إعلانًا أو تعرضه</td><td>لعرض الإعلانات الاختيارية التي تختار مشاهدتها، ومنح المكافأة، وقياس الإعلانات، ومنع الاحتيال الإعلاني</td></tr>
+<tr><td>المحتوى الاجتماعي الذي تنشئه: المنشورات، والصور التي تختار نشرها أو وضعها في الألبومات، والتعليقات، والإعجابات، والمتابعات، وقائمة الأصدقاء المقربين، وشارات الهدايا ورسائلها، وأسماء الألبومات والمتجر، وطلبات الصداقة ورسائلها</td><td>تنشره أو تختاره بنفسك</td><td>يُعرض على اللاعبين الذين تختارهم (الجميع أو الأصدقاء أو الأصدقاء المقربون)؛ وتُفحص الصور أولًا بحثًا عن محتوى غير لائق</td></tr>
+<tr><td>إذا طلبت شارة التوثيق: رابط أحد حساباتك العامة على مواقع التواصل (مثل Instagram وYouTube وTikTok) ورمز نعطيك إياه — <b>دون وثائق هوية</b></td><td>ترسله أنت</td><td>ليفتح فريقنا الحساب العام ويتأكد أنه لك</td></tr>
 </table>
-<p>تعرض اللعبة <b>فقط مقاطع اختيارية «شاهد إعلانًا لتحصل على مكافأة»</b> — ولا توجد إعلانات إجبارية أو لافتات. تقدّم هذه الإعلانات <b>Unity LevelPlay</b> وشركاؤها الإعلانيون، وقد يستخدمون المعرّف الإعلاني لجهازك لعرض إعلانات تناسبك؛ وعلى iPhone يحدث ذلك فقط إذا سمحت بالتتبع. يمكنك إيقاف الإعلانات المخصصة أو إعادة تعيين المعرّف الإعلاني من إعدادات الجهاز، وعلى iPhone اختيار «طلب عدم التتبع من التطبيق». <b>نحن لا نبيع بياناتك.</b> لا تصل اللعبة إلى موقعك أو جهات اتصالك أو مكتبة صورك (باستثناء الصورة الوحيدة التي تختار رفعها كصورة للملف الشخصي).</p>
+<p>تعرض اللعبة <b>فقط مقاطع اختيارية «شاهد إعلانًا لتحصل على مكافأة»</b> — ولا توجد إعلانات إجبارية أو لافتات. تقدّم هذه الإعلانات <b>Unity LevelPlay</b> وشركاؤها الإعلانيون، وقد يستخدمون المعرّف الإعلاني لجهازك لعرض إعلانات تناسبك؛ وعلى iPhone يحدث ذلك فقط إذا سمحت بالتتبع. يمكنك إيقاف الإعلانات المخصصة أو إعادة تعيين المعرّف الإعلاني من إعدادات الجهاز، وعلى iPhone اختيار «طلب عدم التتبع من التطبيق». <b>نحن لا نبيع بياناتك.</b> لا تصل اللعبة إلى موقعك أو جهات اتصالك أو مكتبة صورك (باستثناء الصور التي تختار رفعها بنفسك: صورة الملف الشخصي وصور المنشورات والألبومات ودردشة الأصدقاء).</p>
 <h3>2. مزودو الخدمة الذين يتلقون البيانات</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: تسجيل الدخول، الحفظ السحابي، خوادم اللعبة) — جميع البيانات في القسم 1 باستثناء البريد الإلكتروني</li>
@@ -698,12 +774,16 @@
 </ul>
 <p>يستخدم هؤلاء المزودون البيانات فقط لتقديم خدمتهم لنا، ويجب أن يحموها بمستوى لا يقل عمّا تشترطه هذه السياسة. وقد تُخزَّن البيانات على خوادم خارج تايلاند.</p>
 <p>لا يرى اللاعبون الآخرون سوى اسمك في اللعبة ورقم الوسم وصورتك وإطارك وعلمك (عندما تشتري من كشكهم في السوق).</p>
+<p>تخزّن <b>Supabase</b> أيضًا منشوراتك وتعليقاتك وإعجاباتك ومتابعاتك وألبوماتك وشارات الهدايا وطلبات التوثيق؛ ويمكن فتح الصور المنشورة وصور الألبومات عبر رابط عام ليراها اللاعبون المسموح لهم.</p>
+
 <h3>3. مدة الاحتفاظ بالبيانات</h3>
 <ul>
+<li>المنشورات والتعليقات وصور الألبومات وشارات الهدايا: حتى تحذفها أو تحذف حسابك (قد يُخفى المحتوى المُبلَّغ عنه أثناء المراجعة) · طلب التوثيق: حتى يقرر الفريق، ثم يُحفظ القرار ما دامت الشارة ظاهرة</li>
 <li>بيانات الحساب واللعب: حتى تحذف حسابك</li>
-<li>صور الملف الشخصي القديمة: تُحذف فور تغييرها أو إزالتها</li>
+<li>صور الملف الشخصي القديمة: تُحفظ في ألبوم «صور الملف الشخصي» عند تغييرها أو إزالتها حتى تحذفها (يمكنك حذف أي صورة بنفسك)</li>
 <li>البلاغات وتنبيهات مكافحة الغش: تُحذف بعد مراجعتها، أو عند حذف حساب معني بها</li>
 <li>سجل الإشراف والإيقاف والتصحيح: يُحتفظ به حتى حذف الحساب · ويمكن حذف الحسابات الموقوفة أيضًا</li>
+<li><b>الصور المحذوفة:</b> عند حذفك صورة (صورة منشور أو صورة الملف الشخصي أو صورة ألبوم أو صورة نقابة)، نحتفظ بنسخة خاصة لمدة تصل إلى 14 يومًا حتى يتمكن فريقنا من معالجة البلاغات، ثم تُحذف تلقائيًا. وقد تُحفظ الصورة قيد المراجعة حتى انتهاء المراجعة.</li>
 <li><b>سجلات الشراء</b> (معرّف المعاملة مع معرّف اللاعب، دون اسم): يُحتفظ بها بعد حذف الحساب لأغراض الاستردادات واستعادة المشتريات ومنع الاحتيال والمحاسبة</li>
 <li>الرسائل الإلكترونية: لا أكثر مما يلزم لمعالجة طلبك</li>
 <li>قد تبقى البيانات المحذوفة في النسخ الاحتياطية لدى مزودينا فترة قصيرة إلى أن تزيلها دورتهم المعتادة</li>
@@ -737,8 +817,10 @@
 <tr><td>Il tuo indirizzo email e i tuoi messaggi</td><td>Quando ci contatti</td><td>Per rispondere e gestire la tua richiesta</td></tr>
 <tr><td>Se scegli di collegare il tuo account: un ID account di Apple (Accedi con Apple) o Google (Play Giochi) — <b>non il tuo nome, la tua email o la tua foto</b></td><td>Quando tocchi «Collega account»</td><td>Per mantenere la tua fattoria su un nuovo dispositivo e usare amici, mercato e gilda</td></tr>
 <tr><td>Dati pubblicitari: l’ID pubblicità del dispositivo (solo se lo consenti — su iPhone ti viene chiesto prima), informazioni su dispositivo e app, indirizzo IP e se hai guardato un annuncio</td><td>Raccolti da Unity LevelPlay e dai suoi partner pubblicitari quando il Gioco carica o mostra un annuncio</td><td>Per mostrare gli annunci facoltativi che scegli di guardare, dare la ricompensa, misurare gli annunci e prevenire le frodi pubblicitarie</td></tr>
+<tr><td>Contenuti social che crei: post, foto che scegli di pubblicare o mettere negli album, commenti, mi piace, follow, lista degli amici stretti, distintivi regalo e i loro messaggi, nomi di album e negozio, richieste di amicizia e i loro messaggi</td><td>Li pubblichi o li scegli tu</td><td>Mostrati ai giocatori che scegli (tutti, amici o amici stretti); le foto vengono prima controllate per contenuti inappropriati</td></tr>
+<tr><td>Se chiedi il badge verificato: il link a un tuo account social pubblico (es. Instagram, YouTube, TikTok) e un codice che ti diamo — <b>nessun documento d'identità</b></td><td>Lo invii tu</td><td>Perché il nostro team apra l'account pubblico e confermi che è tuo</td></tr>
 </table>
-<p>Il Gioco mostra <b>solo video facoltativi «guarda un annuncio per una ricompensa»</b> — mai annunci forzati o banner. Questi annunci sono forniti da <b>Unity LevelPlay</b> e dai suoi partner pubblicitari, che possono usare l’ID pubblicità del dispositivo per mostrarti annunci adatti; su iPhone solo se consenti il tracciamento. Puoi disattivare gli annunci personalizzati o reimpostare l’ID pubblicità nelle impostazioni del dispositivo e, su iPhone, scegliere «Chiedi all’app di non tracciare». <b>Non vendiamo i tuoi dati.</b> Il Gioco non accede alla tua posizione, ai contatti o alla libreria foto (tranne l’immagine che scegli di caricare come foto profilo).</p>
+<p>Il Gioco mostra <b>solo video facoltativi «guarda un annuncio per una ricompensa»</b> — mai annunci forzati o banner. Questi annunci sono forniti da <b>Unity LevelPlay</b> e dai suoi partner pubblicitari, che possono usare l’ID pubblicità del dispositivo per mostrarti annunci adatti; su iPhone solo se consenti il tracciamento. Puoi disattivare gli annunci personalizzati o reimpostare l’ID pubblicità nelle impostazioni del dispositivo e, su iPhone, scegliere «Chiedi all’app di non tracciare». <b>Non vendiamo i tuoi dati.</b> Il Gioco non accede alla tua posizione, ai contatti o alla libreria foto (tranne le immagini che scegli tu di caricare: foto profilo e foto per post, album o chat con gli amici).</p>
 <h3>2. Fornitori di servizi che ricevono dati</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: accesso, salvataggio cloud, server di gioco) — tutti i dati della sezione 1 tranne l'email</li>
@@ -751,12 +833,16 @@
 </ul>
 <p>Questi fornitori usano i dati solo per fornirci il loro servizio e devono proteggerli almeno quanto richiede questa informativa. I dati possono essere conservati su server fuori dalla Thailandia.</p>
 <p>Gli altri giocatori vedono solo il tuo nome nel gioco con il numero di tag, la tua immagine, la cornice e la bandiera (quando acquisti dalla loro bancarella del mercato).</p>
+<p><b>Supabase</b> conserva anche i tuoi post, commenti, mi piace, follow, album, distintivi regalo e richieste di verifica; le foto pubblicate e degli album sono raggiungibili con un link pubblico perché le vedano i giocatori autorizzati.</p>
+
 <h3>3. Per quanto tempo conserviamo i dati</h3>
 <ul>
+<li>Post, commenti, foto degli album e distintivi regalo: finché non li elimini o elimini l'account (ciò che è segnalato può essere nascosto durante il controllo) · richiesta di verifica: fino alla decisione del team, poi la decisione è conservata finché il badge è visibile</li>
 <li>Dati dell'account e di gioco: fino a quando elimini l'account</li>
-<li>Vecchie immagini del profilo: eliminate non appena le cambi o le rimuovi</li>
+<li>Vecchie immagini del profilo: conservate nel tuo album «Foto profilo» quando le cambi o le rimuovi, finché non le elimini (puoi eliminarle tu stesso una a una)</li>
 <li>Segnalazioni e avvisi antitruffa: eliminati dopo la revisione o quando viene eliminato un account coinvolto</li>
 <li>Cronologia di moderazione, sospensione e correzione: conservata fino all'eliminazione dell'account · anche gli account sospesi possono essere eliminati</li>
+<li><b>Immagini eliminate:</b> quando elimini un'immagine (foto di un post, foto del profilo, foto di un album o immagine della gilda), conserviamo una copia privata fino a 14 giorni affinché il nostro team possa gestire le segnalazioni, poi viene eliminata automaticamente. Un'immagine in revisione può essere conservata fino al termine della revisione.</li>
 <li><b>Registri degli acquisti</b> (ID transazione con ID giocatore, senza nome): conservati dopo l'eliminazione dell'account per rimborsi, ripristino degli acquisti, prevenzione delle frodi e contabilità</li>
 <li>Email: non oltre il tempo necessario per gestire la tua richiesta</li>
 <li>I dati eliminati possono restare per breve tempo nei backup dei nostri fornitori fino a quando il loro ciclo regolare li rimuove</li>
@@ -790,8 +876,10 @@
 <tr><td>E-posta adresiniz ve mesajlarınız</td><td>Bizimle iletişime geçtiğinizde</td><td>Talebinizi yanıtlamak ve işleme almak için</td></tr>
 <tr><td>Hesabını bağlamayı seçersen: Apple (Apple ile Giriş Yap) veya Google (Play Oyunlar) hesap kimliği — <b>adın, e-postan veya fotoğrafın değil</b></td><td>“Hesabı bağla”ya dokunduğunda</td><td>Çiftliğini yeni cihazda korumak ve arkadaşlar, pazar ve loncayı kullanmak için</td></tr>
 <tr><td>Reklam verileri: cihazının reklam kimliği (yalnızca izin verirsen — iPhone’da önce sorulur), cihaz ve uygulama bilgileri, IP adresi ve bir reklamı izleyip izlemediğin</td><td>Oyun reklam yüklediğinde veya gösterdiğinde Unity LevelPlay ve reklam ortakları tarafından toplanır</td><td>İzlemeyi seçtiğin isteğe bağlı reklamları göstermek, ödülü vermek, reklamları ölçmek ve reklam dolandırıcılığını önlemek için</td></tr>
+<tr><td>Oluşturduğun sosyal içerik: gönderiler, paylaşmak veya albüme koymak için seçtiğin fotoğraflar, yorumlar, beğeniler, takipler, yakın arkadaş listesi, hediye rozetleri ve mesajları, albüm ve dükkân adları, arkadaşlık istekleri ve mesajları</td><td>Sen paylaşır veya seçersin</td><td>Seçtiğin oyunculara gösterilir (herkes, arkadaşlar veya yakın arkadaşlar); fotoğraflar önce uygunsuz içerik için kontrol edilir</td></tr>
+<tr><td>Doğrulanmış rozeti istersen: herkese açık bir sosyal medya hesabının bağlantısı (ör. Instagram, YouTube, TikTok) ve sana verdiğimiz kod — <b>kimlik belgesi yok</b></td><td>Sen gönderirsin</td><td>Ekibimiz herkese açık hesabı açıp senin olduğunu doğrulasın diye</td></tr>
 </table>
-<p>Oyun <b>yalnızca isteğe bağlı “ödül için reklam izle” videoları</b> gösterir — zorunlu reklam veya banner asla yoktur. Bu reklamlar <b>Unity LevelPlay</b> ve reklam ortakları tarafından sunulur; sana uygun reklamlar göstermek için cihazının reklam kimliğini kullanabilirler, iPhone’da yalnızca izlemeye izin verirsen. Cihaz ayarlarından kişiselleştirilmiş reklamları kapatabilir veya reklam kimliğini sıfırlayabilir, iPhone’da “Uygulamadan İzlememesini İste”yi seçebilirsin. <b>Verilerini satmayız.</b> Oyun konumuna, kişilerine veya fotoğraf arşivine erişmez (profil fotoğrafı olarak yüklemeyi seçtiğin tek görsel hariç).</p>
+<p>Oyun <b>yalnızca isteğe bağlı “ödül için reklam izle” videoları</b> gösterir — zorunlu reklam veya banner asla yoktur. Bu reklamlar <b>Unity LevelPlay</b> ve reklam ortakları tarafından sunulur; sana uygun reklamlar göstermek için cihazının reklam kimliğini kullanabilirler, iPhone’da yalnızca izlemeye izin verirsen. Cihaz ayarlarından kişiselleştirilmiş reklamları kapatabilir veya reklam kimliğini sıfırlayabilir, iPhone’da “Uygulamadan İzlememesini İste”yi seçebilirsin. <b>Verilerini satmayız.</b> Oyun konumuna, kişilerine veya fotoğraf arşivine erişmez (kendin yüklemeyi seçtiğin görseller hariç: profil fotoğrafı ve gönderi, albüm veya arkadaş sohbeti fotoğrafları).</p>
 <h3>2. Veri alan hizmet sağlayıcılar</h3>
 <ul>
 <li><b>Unity Technologies</b> (Unity Gaming Services: oturum açma, bulut kaydı, oyun sunucuları) — 1. bölümdeki e-posta dışındaki tüm veriler</li>
@@ -804,12 +892,16 @@
 </ul>
 <p>Bu sağlayıcılar verileri yalnızca bize hizmet vermek için kullanır ve bu politikanın gerektirdiği düzeyde veya daha iyi korumak zorundadır. Veriler Tayland dışındaki sunucularda saklanabilir.</p>
 <p>Diğer oyuncular yalnızca oyun içi adınızı ve etiket numaranızı, resminizi, çerçevenizi ve bayrağınızı görür (onların pazar tezgâhından satın aldığınızda).</p>
+<p><b>Supabase</b> ayrıca gönderilerini, yorumlarını, beğenilerini, takiplerini, albümlerini, hediye rozetlerini ve doğrulama isteklerini saklar; paylaşılan ve albümdeki fotoğraflar, görme izni olan oyuncular açabilsin diye herkese açık bir bağlantıyla erişilebilir.</p>
+
 <h3>3. Verileri ne kadar süre saklıyoruz</h3>
 <ul>
+<li>Gönderiler, yorumlar, albüm fotoğrafları ve hediye rozetleri: sen ya da hesabın silinene kadar (bildirilen içerik inceleme sırasında gizlenebilir) · doğrulama isteği: ekip karar verene kadar, sonra rozet göründüğü sürece karar saklanır</li>
 <li>Hesap ve oyun verileri: hesabınızı silene kadar</li>
-<li>Eski profil resimleri: değiştirdiğiniz veya kaldırdığınız anda silinir</li>
+<li>Eski profil resimleri: değiştirdiğinde veya kaldırdığında “Profil fotoğrafları” albümünde saklanır, sen silene kadar (hepsini kendin silebilirsin)</li>
 <li>Şikâyetler ve hile karşıtı uyarılar: incelendikten sonra veya ilgili bir hesap silindiğinde silinir</li>
 <li>Moderasyon, askıya alma ve düzeltme geçmişi: hesap silinene kadar saklanır · askıya alınmış hesaplar da silinebilir</li>
+<li><b>Silinen görseller:</b> bir görseli sildiğinde (gönderi fotoğrafı, profil resmi, albüm fotoğrafı veya lonca görseli), ekibimizin bildirimleri ele alabilmesi için özel bir kopyayı en fazla 14 gün saklarız, ardından otomatik olarak silinir. İnceleme altındaki bir görsel, inceleme bitene kadar saklanabilir.</li>
 <li><b>Satın alma kayıtları</b> (Oyuncu Kimliği ile işlem kimliği, ad yok): iadeler, satın alımları geri yükleme, sahtekârlığı önleme ve muhasebe için hesap silindikten sonra da saklanır</li>
 <li>E-postalar: talebinizi yürütmek için gerekenden uzun süre saklanmaz</li>
 <li>Silinen veriler, sağlayıcılarımızın düzenli döngüsü bunları kaldırana kadar yedeklerinde kısa bir süre kalabilir</li>
@@ -845,6 +937,8 @@
       if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
     });
     var s = document.getElementById(id); document.documentElement.lang = s.getAttribute('lang') || id;
+    var logo = document.getElementById('herologo');
+    if (logo) { var L = { ar: 'ar', ja: 'ja', ko: 'ko', ru: 'ru', th: 'th', 'zh-Hant': 'zh' }[id]; logo.src = L ? 'img/logo-' + L + '.webp' : 'img/logo.webp'; }
   }
   bar.addEventListener('click', function (e) {
     var a = e.target.closest('a'); if (!a) return; e.preventDefault();
