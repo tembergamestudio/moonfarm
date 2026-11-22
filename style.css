@@ -32,3 +32,31 @@ footer p { margin: 0; }
 .hero { display: flex; justify-content: center; padding: 40px 16px 0; }
 .hero a, .hero h1 { display: block; margin: 0; line-height: 0; }
 .hero img { display: block; width: min(580px, 94vw); height: auto; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .18)); }
+
+/* Home page (2026-11-23): banner + store badges + feature cards */
+body.home main { max-width: 880px; }
+body.home .hero { padding: 16px 16px 0; }
+body.home .hero img { width: min(1100px, 100%); height: auto; border-radius: 20px; filter: none; box-shadow: 0 6px 24px rgba(0, 0, 0, .18); }
+body.home header { margin-bottom: 8px; }
+body.home .lang { justify-content: center; }
+.tagline { font-size: clamp(20px, 4.6vw, 27px); font-weight: 700; line-height: 1.4; text-align: center; margin: 22px auto 6px; max-width: 640px; }
+.cta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 14px; margin: 14px 0 6px; }
+.badge { display: inline-block; line-height: 0; border-radius: 10px; transition: transform .15s; }
+.badge:hover { transform: translateY(-2px); }
+.badge:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.badge img { display: block; height: 48px; width: auto; }
+.badge.google img { height: 72px; margin: -12px -10px; }
+.platforms { text-align: center; color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+.lead { text-align: center; color: var(--muted); max-width: 640px; margin: 22px auto 0; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin: 26px 0 14px; }
+.feat, .calm-item { display: flex; align-items: center; gap: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 18px; }
+.feat img { flex: none; width: 84px; height: 84px; object-fit: contain; }
+.feat h3, .calm-item h3 { margin: 0 0 4px; font-size: 17px; }
+.feat p, .calm-item p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.calm { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin: 0 0 22px; }
+.calm-item .emo { flex: none; font-size: 38px; line-height: 1; width: 84px; text-align: center; }
+.free { text-align: center; color: var(--muted); font-size: 15px; margin: 18px 0 4px; }
+body.home .links.legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px; margin: 30px 0 0; }
+body.home .links.legal a { display: inline; padding: 0; margin: 0; background: none; border: 0; border-radius: 0; font-weight: 400; font-size: 14px; color: var(--muted); text-decoration: underline; }
+.toast { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 10; background: var(--fg); color: var(--bg); padding: 10px 20px; border-radius: 999px; font-size: 15px; font-weight: 600; box-shadow: 0 6px 20px rgba(0, 0, 0, .25); max-width: calc(100vw - 32px); text-align: center; }
+.toast[hidden] { display: none; }
