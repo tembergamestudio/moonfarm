@@ -86,3 +86,18 @@ body.home .links.legal a { display: inline; padding: 0; margin: 0; background: n
 .flagtxt { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 15px; border-radius: 2px; font-size: 11px; line-height: 1; background: var(--line); color: var(--fg); }
 @media (max-width: 520px) { .langmenu.js.open .lang { grid-template-columns: repeat(2, 1fr); } }
 .tm { text-align: center; color: var(--muted); font-size: 12px; line-height: 1.5; max-width: 640px; margin: 18px auto 0; }
+
+/* "Join the Android closed test" card (2026-11-27) — opened by the Google Play badge while Android is in closed testing */
+.jointest { max-width: 640px; margin: 18px auto 0; padding: 18px 20px; background: var(--card); border: 1.5px solid var(--line); border-radius: 16px; text-align: start; }
+.jointest[hidden] { display: none; }
+.jointest h3 { margin: 0 0 6px; font-size: 18px; }
+.jointest p { margin: 0 0 10px; color: var(--muted); font-size: 15px; }
+.jointest ol { list-style: none; counter-reset: jt; margin: 0 0 8px; padding: 0; display: grid; gap: 12px; }
+.jointest li { counter-increment: jt; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.jointest li::before { content: counter(jt); flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; }
+.jointest li span { flex: 1 1 240px; font-size: 15px; }
+.jt-btn { display: inline-block; padding: 7px 16px; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; }
+.jointest .jt-note { font-size: 13px; margin-top: 4px; }
+.jt-close { padding: 6px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--fg); font: inherit; font-size: 14px; cursor: pointer; }
+.jt-btn:focus-visible, .jt-close:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (prefers-color-scheme: dark) { .jointest li::before, .jt-btn { color: #1d1913; } }
